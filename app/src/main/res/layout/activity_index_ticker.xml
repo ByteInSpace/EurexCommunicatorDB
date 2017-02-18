@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="byteinspace.net.eurexcommunicatordb.IndexTickerActivity">
+    tools:context="byteinspace.net.eurexcommunicatordb.IndexTickerActivity"
+    >
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="106dp"
         android:fitsSystemWindows="true"
-        android:theme="@style/AppBarOverlay">
+        android:theme="@style/AppBarOverlay"
+        >
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"

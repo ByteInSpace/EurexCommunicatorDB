@@ -1,5 +1,6 @@
 package byteinspace.net.eurexcommunicatordb.adapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,8 +78,12 @@ public class IndexAdapter extends BaseAdapter {
         Index ticker = (Index) getItem(position);
         holder.index_name.setText(ticker.getName());
         holder.index_value.setText(String.valueOf(ticker.getLastRate()));
-        holder.index_increasedecrease.setText(String.valueOf(ticker.getIncreaseDecrease()) + " %");
-
+        double changeRate = ticker.getIncreaseDecrease();
+        holder.index_increasedecrease.setText(String.valueOf(changeRate) + " %");
+        if (changeRate >= 0)
+            holder.index_increasedecrease.setTextColor(Color.GREEN);
+        else
+            holder.index_increasedecrease.setTextColor(Color.RED);
         return convertView;
 
 
