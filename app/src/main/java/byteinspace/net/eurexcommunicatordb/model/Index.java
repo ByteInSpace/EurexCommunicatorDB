@@ -8,6 +8,7 @@ public class Index {
     private boolean favourite = false;
     private final String name;
     private double last_rate;
+    private double increase_descrease = 0d;
 
     public Index(String name, double rate) {
         this.name = name;
@@ -22,9 +23,13 @@ public class Index {
         return this.last_rate;
     }
 
-    public boolean setNewRate(double newrate) {
-        boolean returnValue = newrate > this.last_rate;
+    public void setNewRate(double newrate) {
+        increase_descrease = newrate - this.last_rate;
         this.last_rate = newrate;
-        return returnValue;
     }
+
+    public double getIncreaseDecrease() {
+        return this.increase_descrease;
+    }
+
 }

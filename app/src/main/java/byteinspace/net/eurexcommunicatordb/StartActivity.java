@@ -5,8 +5,6 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import java.util.TimerTask;
-
 public class StartActivity extends AppCompatActivity {
 
     @Override
@@ -23,7 +21,7 @@ public class StartActivity extends AppCompatActivity {
     }
 
     protected void showNextScreen() {
-        Intent intent = new Intent(this, IndexTicker.class);
+        Intent intent = new Intent(this, IndexTickerActivity.class);
         startActivity(intent);
     }
 

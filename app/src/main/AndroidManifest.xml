@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".IndexTicker"
+            android:name=".IndexTickerActivity"
             android:label="@string/title_activity_index_ticker"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>

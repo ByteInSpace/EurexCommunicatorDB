@@ -1,5 +1,6 @@
 package byteinspace.net.eurexcommunicatordb.model;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,10 +22,10 @@ public final class IndexHolder {
 
     private static final IndexHolder INSTANCE = new IndexHolder();
 
-    private final Map<String, Index> mapIndex;
+    private final Map<String, Index> mapIndex = new HashMap<>();
 
     private IndexHolder() {
-        mapIndex = new HashMap<>();
+
 
         mapIndex.put(DAX, new Index(DAX, 11435));
         mapIndex.put(MINIDAX, new Index(MINIDAX, 345.4d));
@@ -35,7 +36,5 @@ public final class IndexHolder {
         mapIndex.put(SENSEX, new Index(SENSEX, 34543.4));
     }
 
-    public static Index getIndex(String key) {
-        return INSTANCE.mapIndex.get(key);
-    }
+
 }
