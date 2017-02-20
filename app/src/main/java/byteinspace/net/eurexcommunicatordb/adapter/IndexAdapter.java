@@ -44,6 +44,7 @@ public class IndexAdapter extends BaseAdapter {
         indices.add(getNewIndex(OMX, 2345, 2341));
         indices.add(getNewIndex(STOXX, 23, 22));
         indices.add(getNewIndex(SENSEX, 34543, 34503));
+        // andere folgen
 
     }
 
