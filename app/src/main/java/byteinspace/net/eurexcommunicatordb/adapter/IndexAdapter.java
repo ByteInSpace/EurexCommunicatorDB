@@ -63,7 +63,7 @@ public class IndexAdapter extends BaseAdapter {
         ViewHolder holder;
 
         if (convertView == null) {
-            convertView = inflator.inflate(R.layout.content_index_ticker, parent, false);
+            convertView = inflator.inflate(R.layout.index_list_view, parent, false);
             holder = new ViewHolder();
             holder.index_name = (TextView) convertView.findViewById(R.id.index_name);
             holder.index_value = (TextView) convertView.findViewById(R.id.index_value);
