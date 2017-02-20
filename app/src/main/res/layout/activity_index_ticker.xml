@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbar"
-        android:background="@color/colorBackground"
         android:elevation="4dp">
 
     </android.support.v7.widget.Toolbar>
@@ -17,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
-        android:id="@+id/lv"></ListView>
+        android:id="@+id/lv"
+        android:background="@color/colorBackground"></ListView>
 
 </RelativeLayout>

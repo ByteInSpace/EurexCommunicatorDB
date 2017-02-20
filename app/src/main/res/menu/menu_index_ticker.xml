@@ -2,15 +2,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="byteinspace.net.eurexcommunicatordb.IndexTickerActivity">
-    <item
+    <!--<item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="always" />
+-->
 
     <item
-        android:id="@+id/action_settings"
-        android:title="Settings"
-        android:showAsAction="never"/>
+        android:id="@+id/action_index_eurex"
+        android:title="@string/title_activity_index_ticker"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_index_futures"
+        android:title="@string/futures"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_index_options"
+        android:title="@string/options"
+        app:showAsAction="never"/>
 
 </menu>

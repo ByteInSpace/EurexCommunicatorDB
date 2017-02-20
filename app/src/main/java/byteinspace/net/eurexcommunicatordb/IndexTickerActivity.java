@@ -1,6 +1,7 @@
 package byteinspace.net.eurexcommunicatordb;
 
 import android.app.ListActivity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -32,15 +34,26 @@ public class IndexTickerActivity extends AppCompatActivity implements AdapterVie
 
         adapter = new IndexAdapter(this);
         lv.setAdapter(adapter);
-/*
-        final ActionBar actionBar = getSupportActionBar();
 
-        if (actionBar != null) {
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
-            actionBar.setDisplayShowTitleEnabled(false);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-        */
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+
+
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_index_eurex:
+                        System.out.println("Index Eurex");
+                        return true;
+                    case R.id.action_index_futures:
+                        System.out.println("Index Futures");
+                        return true;
+                    case R.id.action_index_options:
+                        System.out.println("Index Options");
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
     @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
