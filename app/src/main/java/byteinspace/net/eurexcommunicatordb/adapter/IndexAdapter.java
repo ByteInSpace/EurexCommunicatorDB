@@ -20,33 +20,23 @@ import byteinspace.net.eurexcommunicatordb.model.Index;
  * Created by daniel on 18.02.2017.
  */
 
-public class IndexAdapter extends BaseAdapter {
+public abstract class IndexAdapter extends BaseAdapter {
 
     private final LayoutInflater inflator;
-    private final List<Index> indices;
+    protected final List<Index> indices;
 
-    public static final String DAX = "DAX";
-    public static final String MINIDAX = "MINIDAX";
-    public static final String SMI = "SMI";
-    public static final String SLI = "SLI";
-    public static final String OMX = "OMX";
-    public static final String STOXX = "STOXX";
-    public static final String SENSEX = "SENSEX";
+
 
     public IndexAdapter(Context context) {
         inflator = LayoutInflater.from(context);
         indices = new ArrayList<>();
 
-        indices.add(getNewIndex(DAX, 11435, 11430));
-        indices.add(getNewIndex(MINIDAX, 345, 380));
-        indices.add(getNewIndex(SMI, 3445, 3440));
-        indices.add(getNewIndex(SLI, 9833, 9850));
-        indices.add(getNewIndex(OMX, 2345, 2341));
-        indices.add(getNewIndex(STOXX, 23, 22));
-        indices.add(getNewIndex(SENSEX, 34543, 34503));
+        addIndices();
         // andere folgen
 
     }
+
+    protected abstract void addIndices();
 
     @Override public int getCount() {
         return indices.size();
@@ -85,12 +75,19 @@ public class IndexAdapter extends BaseAdapter {
             holder.index_increasedecrease.setTextColor(Color.GREEN);
         else
             holder.index_increasedecrease.setTextColor(Color.RED);
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Hier bin ich");
+            }
+        });
         return convertView;
 
 
     }
 
-    private Index getNewIndex(String name, double last_rate, double new_rate) {
+    protected Index getNewIndex(String name, double last_rate, double new_rate) {
         Index dax = new Index(name, last_rate);
         dax.setNewRate(new_rate);
         return dax;

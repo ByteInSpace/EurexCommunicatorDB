@@ -13,17 +13,11 @@
         android:layout_height="match_parent"
         android:padding="6dp"
         android:background="@color/colorBackground"
+        android:descendantFocusability="blocksDescendants"
+
         >
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:minHeight="?attr/actionBarSize"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:titleTextColor="@android:color/white"
-            android:background="?attr/colorPrimary">
 
-        </android.support.v7.widget.Toolbar>
 
         <ImageView android:id="@+id/favorite"
             android:layout_alignParentStart="true"
@@ -32,7 +26,11 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:contentDescription="@string/hint_favorite"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="@color/colorPrimary"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
 
         <TextView android:id="@+id/index_name"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -41,6 +39,9 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             />
 
         <TextView android:id="@+id/index_value"
@@ -48,14 +49,21 @@
             android:layout_width="96dp"
             android:layout_toRightOf="@id/index_name"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="@color/colorPrimary"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
 
         <TextView android:id="@+id/index_increasedecrease"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="96dp"
             android:layout_toRightOf="@id/index_value"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="@color/colorPrimary"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
 
 
 

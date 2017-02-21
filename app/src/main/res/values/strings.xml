@@ -7,4 +7,7 @@
     <string name="hint_favorite">Add to favourites</string>
     <string name="futures">Futures</string>
     <string name="options">Options</string>
+    <string name="logon_eurex">Logon Eurex</string>
+    <string name="logon_xetra">Logon Xetra</string>
+    <string name="logon_eurex_clearing">Logon Eurex Clearing</string>
 </resources>

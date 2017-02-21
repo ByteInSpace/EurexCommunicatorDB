@@ -2,14 +2,17 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:clickable="false">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbar"
-        android:elevation="4dp">
-
+        android:elevation="4dp"
+         android:background="@color/colorPrimary"
+            >
     </android.support.v7.widget.Toolbar>
 
     <ListView
@@ -17,6 +20,8 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
         android:id="@+id/lv"
-        android:background="@color/colorBackground"></ListView>
+        android:background="@color/colorBackground"
+        android:descendantFocusability="blocksDescendants"
+        ></ListView>
 
 </RelativeLayout>

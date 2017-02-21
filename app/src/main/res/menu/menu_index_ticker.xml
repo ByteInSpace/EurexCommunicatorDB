@@ -9,6 +9,7 @@
         app:showAsAction="always" />
 -->
 
+    <group android:id="@+id/indicesgroup">
     <item
         android:id="@+id/action_index_eurex"
         android:title="@string/title_activity_index_ticker"
@@ -24,4 +25,21 @@
         android:title="@string/options"
         app:showAsAction="never"/>
 
+    </group>
+
+    <group android:id="@+id/logongroup">
+        <item
+            android:id="@+id/action_logon_eurex"
+            android:title="@string/logon_eurex"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_logon_xetra"
+            android:title="@string/logon_xetra"
+            app:showAsAction="never"/>
+
+        <item
+            android:id="@+id/action_logon_eurex_clearing"
+            android:title="@string/logon_eurex_clearing"
+            app:showAsAction="never"/>
+    </group>
 </menu>

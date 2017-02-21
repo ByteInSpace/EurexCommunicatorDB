@@ -15,25 +15,44 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import byteinspace.net.eurexcommunicatordb.adapter.IndexAdapter;
+import byteinspace.net.eurexcommunicatordb.model.EurexIndexAdapter;
+import byteinspace.net.eurexcommunicatordb.model.FuturesAdapter;
 import byteinspace.net.eurexcommunicatordb.model.Index;
+import byteinspace.net.eurexcommunicatordb.model.OptionsAdapter;
 
 public class IndexTickerActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private IndexAdapter adapter;
     private Toolbar toolbar;
     private ListView lv;
+    private IndexAdapter eurexIndexAdapter;
+    private IndexAdapter futuresAdapter;
+    private IndexAdapter adapter;
+    private IndexAdapter optionsAdapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index_ticker);
 
+        eurexIndexAdapter = new EurexIndexAdapter(this);
+        futuresAdapter = new FuturesAdapter(this);
+        optionsAdapter = new OptionsAdapter(this);
+
+        adapter = eurexIndexAdapter;
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         lv = (ListView) findViewById(R.id.lv);
         setSupportActionBar(toolbar);
 
-        adapter = new IndexAdapter(this);
-        lv.setAdapter(adapter);
+        lv.setAdapter(eurexIndexAdapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                processItemClick(position, id);
+            }
+        });
 
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
 
@@ -42,13 +61,16 @@ public class IndexTickerActivity extends AppCompatActivity implements AdapterVie
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_index_eurex:
-                        System.out.println("Index Eurex");
+                        adapter = eurexIndexAdapter;
+                        lv.setAdapter(eurexIndexAdapter);
                         return true;
                     case R.id.action_index_futures:
-                        System.out.println("Index Futures");
+                        adapter = futuresAdapter;
+                        lv.setAdapter(futuresAdapter);
                         return true;
                     case R.id.action_index_options:
-                        System.out.println("Index Options");
+                        adapter = optionsAdapter;
+                        lv.setAdapter(optionsAdapter);
                         return true;
                 }
                 return false;
@@ -56,8 +78,12 @@ public class IndexTickerActivity extends AppCompatActivity implements AdapterVie
         });
     }
 
+    private void processItemClick(int position, long id) {
+        System.out.println("Position: " + position + " ID " + id);
+    }
     @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Index index = (Index) adapter.getItem(position);
+        System.out.println("Entry: " + index.getName());
     }
 
     @Override public boolean onCreateOptionsMenu(Menu menu) {
