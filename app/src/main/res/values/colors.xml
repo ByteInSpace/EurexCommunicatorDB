@@ -6,4 +6,5 @@
     <color name="colorBackground">#FFFFFF</color>
     <color name="rate_increase">#FFFFFF</color>
     <color name="rate_decrease">#FFFFFF</color>
+    <color name="textview_background">#a4cef8</color>
 </resources>

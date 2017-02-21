@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:descendantFocusability="blocksDescendants"
-    android:clickable="false">
+   >
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -22,6 +22,7 @@
         android:id="@+id/lv"
         android:background="@color/colorBackground"
         android:descendantFocusability="blocksDescendants"
+
         ></ListView>
 
 </RelativeLayout>

@@ -76,6 +76,7 @@ public abstract class IndexAdapter extends BaseAdapter {
         else
             holder.index_increasedecrease.setTextColor(Color.RED);
 
+        convertView.setFocusable(false);
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

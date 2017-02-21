@@ -1,6 +1,7 @@
 package byteinspace.net.eurexcommunicatordb;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -47,12 +48,17 @@ public class IndexTickerActivity extends AppCompatActivity implements AdapterVie
         setSupportActionBar(toolbar);
 
         lv.setAdapter(eurexIndexAdapter);
+        lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        lv.setFocusable(false);
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 processItemClick(position, id);
             }
         });
+
+
 
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
 
@@ -72,12 +78,27 @@ public class IndexTickerActivity extends AppCompatActivity implements AdapterVie
                         adapter = optionsAdapter;
                         lv.setAdapter(optionsAdapter);
                         return true;
+                    case R.id.action_logon_eurex:
+                        showLogonScreen();
+                        return true;
+                    case R.id.action_logon_xetra:
+                        showLogonScreen();
+                        return true;
+                    case R.id.action_logon_eurex_clearing:
+                        showLogonScreen();
+                        return true;
+
+
                 }
                 return false;
             }
         });
     }
 
+    private void showLogonScreen() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
     private void processItemClick(int position, long id) {
         System.out.println("Position: " + position + " ID " + id);
     }
