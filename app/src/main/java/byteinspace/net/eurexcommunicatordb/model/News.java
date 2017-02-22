@@ -13,6 +13,7 @@ public class News {
     private String headline;
     private NEWS_TYPE type;
     private String author;
+    private String image;
 
     public String getHeadline() {
         return headline;
@@ -43,7 +44,16 @@ public class News {
         return Date;
     }
 
+
     public void setDate(String date) {
         Date = date;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

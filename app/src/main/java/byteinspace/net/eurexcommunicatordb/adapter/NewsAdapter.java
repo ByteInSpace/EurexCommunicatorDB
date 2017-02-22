@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -55,6 +56,7 @@ public class NewsAdapter extends BaseAdapter {
             holder.news_date = (TextView) convertView.findViewById(R.id.news_date);
             holder.news_type = (TextView) convertView.findViewById(R.id.news_type);
             holder.news_headline = (TextView) convertView.findViewById(R.id.news_headline);
+            holder.news_image = (ImageView) convertView.findViewById(R.id.news_image);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -65,6 +67,7 @@ public class NewsAdapter extends BaseAdapter {
         holder.news_date.setText(news.getDate());
         holder.news_type.setText(news.getAuthor() + " | " + news.getType());
         holder.news_headline.setText(news.getHeadline());
+        holder.news_image.setImageResource(R.drawable.news1);
 
         convertView.setFocusable(false);
         convertView.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +83,7 @@ public class NewsAdapter extends BaseAdapter {
 
     static class ViewHolder {
         TextView news_date, news_type, news_headline;
+        ImageView news_image;
 
     }
 

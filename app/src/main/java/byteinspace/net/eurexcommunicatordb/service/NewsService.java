@@ -19,6 +19,7 @@ public class NewsService {
         news1.setHeadline("Marktteilnehmer setzen angesichts geopolitischer Risiken auf Eurex-Zins-Futures");
         news1.setAuthor("Eurex Group");
         news1.setType(News.NEWS_TYPE.Presse);
+        news1.setImage("news1.png");
         news.add(news1);
 
         News news2 = new News();
@@ -26,6 +27,7 @@ public class NewsService {
         news2.setHeadline("Eurex Exchange und DEGIRO beschließen Partnerschaft");
         news2.setAuthor("Eurex Exchange");
         news2.setType(News.NEWS_TYPE.Focus);
+        news2.setImage("news2.png");
         news.add(news2);
 
         News news3 = new News();
@@ -33,6 +35,7 @@ public class NewsService {
         news3.setHeadline("Eurex Börsenrat wählt Carola Gräfin von Schmettow zur Vorsitzenden");
         news3.setAuthor("Eurex Exchange");
         news3.setType(News.NEWS_TYPE.Presse);
+        news3.setImage("news3.png");
         news.add(news3);
 
         News news4 = new News();
@@ -40,6 +43,9 @@ public class NewsService {
         news4.setHeadline("WH SelfInvest: Heimspiel für Trader");
         news4.setAuthor("Eurex Exchange");
         news4.setType(News.NEWS_TYPE.Focus);
+        news4.setImage("news1.png");
+
+        news.add(news4);
 
         return news;
     }
