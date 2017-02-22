@@ -13,11 +13,12 @@ import android.widget.ListView;
 import byteinspace.net.eurexcommunicatordb.adapter.NewsAdapter;
 import byteinspace.net.eurexcommunicatordb.model.News;
 
-public class NewsActivity extends AppCompatActivity {
+public class NewsActivity extends BasePublicActivity {
 
     NewsAdapter adapter;
-    Toolbar toolbar;
+
     ListView lv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,19 +26,21 @@ public class NewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_news);
         adapter = new NewsAdapter(this);
 
-        toolbar = (Toolbar) findViewById(R.id.news_toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.news_toolbar);
 
         lv = (ListView) findViewById(R.id.newslist);
         lv.setAdapter(adapter);
         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         lv.setFocusable(false);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                System.out.println("TEST");
+            }
+        });
 
-    }
 
-    @Override public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_public, menu);
-        return true;
+        showToolbar(toolbar);
     }
 
 

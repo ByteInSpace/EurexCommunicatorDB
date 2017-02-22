@@ -23,9 +23,8 @@ import byteinspace.net.eurexcommunicatordb.model.FuturesAdapter;
 import byteinspace.net.eurexcommunicatordb.model.Index;
 import byteinspace.net.eurexcommunicatordb.model.OptionsAdapter;
 
-public class IndexTickerActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class IndexTickerActivity extends BasePublicActivity implements AdapterView.OnItemClickListener {
 
-    private Toolbar toolbar;
     private ListView lv;
     private IndexAdapter eurexIndexAdapter;
     private IndexAdapter futuresAdapter;
@@ -43,13 +42,12 @@ public class IndexTickerActivity extends AppCompatActivity implements AdapterVie
         futuresAdapter = new FuturesAdapter(this);
         optionsAdapter = new OptionsAdapter(this);
 
-        adapter = eurexIndexAdapter;
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Intent intent = getIntent();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         lv = (ListView) findViewById(R.id.lv);
-        setSupportActionBar(toolbar);
 
-        lv.setAdapter(eurexIndexAdapter);
+        showAdapter(intent.getStringExtra(Constants.KEY));
+
         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         lv.setFocusable(false);
 
@@ -60,43 +58,27 @@ public class IndexTickerActivity extends AppCompatActivity implements AdapterVie
             }
         });
 
+        showToolbar(toolbar);
 
 
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-
-
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_index_eurex:
-                        adapter = eurexIndexAdapter;
-                        lv.setAdapter(eurexIndexAdapter);
-                        return true;
-                    case R.id.action_index_futures:
-                        adapter = futuresAdapter;
-                        lv.setAdapter(futuresAdapter);
-                        return true;
-                    case R.id.action_index_options:
-                        adapter = optionsAdapter;
-                        lv.setAdapter(optionsAdapter);
-                        return true;
-                    case R.id.action_logon_eurex:
-                        showLogonScreen();
-                        return true;
-                    case R.id.action_logon_xetra:
-                        showLogonScreen();
-                        return true;
-                    case R.id.action_logon_eurex_clearing:
-                        showLogonScreen();
-                        return true;
-
-
-                }
-                return false;
-            }
-        });
     }
 
+    private void showAdapter(String target) {
+        switch (target) {
+            case Constants.MAIN:
+                lv.setAdapter(eurexIndexAdapter);
+                adapter = eurexIndexAdapter;
+                return;
+            case Constants.FUTURES:
+                lv.setAdapter(futuresAdapter);
+                adapter = futuresAdapter;
+                return;
+            case Constants.OPTIONS:
+                lv.setAdapter(optionsAdapter);
+                adapter = optionsAdapter;
+                return;
+        }
+    }
     private void showLogonScreen() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
@@ -109,21 +91,7 @@ public class IndexTickerActivity extends AppCompatActivity implements AdapterVie
         System.out.println("Entry: " + index.getName());
     }
 
-    @Override public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_index_ticker, menu);
 
-        MenuItem indicesMenuSpinner = menu.findItem(R.id.kurse);
-        setupKurse(indicesMenuSpinner);
 
-        return true;
-    }
 
-    private void setupKurse(MenuItem item) {
-        View view = item.getActionView();
-        if (view instanceof  Spinner) {
-            Spinner spinner = (Spinner) view;
-            spinner.setAdapter(ArrayAdapter.createFromResource(this, R.array.menu_indices, android.R.layout.simple_spinner_dropdown_item));
-        }
-       // how to add a second drop down list to action bar in android-honeycomb
-    }
 }

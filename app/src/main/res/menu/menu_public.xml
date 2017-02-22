@@ -13,6 +13,44 @@
         android:id="@+id/indices"
         android:icon="@drawable/kurs"
         app:showAsAction="ifRoom"
-        android:title="Indices"/>
+        android:title="Indices">
+    <menu>
+        <item
+            android:id="@+id/mainindices"
+            android:title="@string/title_activity_ticker_main"
+            />
+        <item
+            android:id="@+id/futures"
+            android:title="@string/futures"
+            />
+        <item
+            android:id="@+id/options"
+            android:title="@string/options"
+            />
+
+    </menu>
+    </item>
+
+    <item
+        android:id="@+id/logon"
+        android:icon="@drawable/logon"
+        app:showAsAction="ifRoom"
+        android:title="Member Logon">
+        <menu>
+            <item
+                android:id="@+id/eurexlogon"
+                android:title="@string/logon_eurex"
+                />
+            <item
+                android:id="@+id/eurexclearinglogon"
+                android:title="@string/logon_eurex_clearing"
+                />
+            <item
+                android:id="@+id/xetralogon"
+                android:title="@string/logon_xetra"
+                />
+
+        </menu>
+    </item>
 
 </menu>
