@@ -9,6 +9,13 @@
         app:showAsAction="always" />
 -->
 
+    <item
+        android:id="@+id/kurse"
+        android:actionViewClass="android.widget.Spinner"
+        app:showAsAction="always"
+        android:title="@string/indices"
+        />
+
     <group android:id="@+id/indicesgroup">
     <item
         android:id="@+id/action_index_eurex"

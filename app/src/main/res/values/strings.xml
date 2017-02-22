@@ -24,4 +24,12 @@
         completions."
     </string>
     <string name="username">Username</string>
+    <string name="indices">Ind</string>
+    <string name="news_headline">News</string>
+
+    <string-array name="menu_indices">
+        <item>Eurex Indizes</item>
+        <item>Futures</item>
+        <item>Optionen</item>
+    </string-array>
 </resources>

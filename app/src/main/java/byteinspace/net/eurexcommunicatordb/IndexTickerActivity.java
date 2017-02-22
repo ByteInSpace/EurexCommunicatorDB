@@ -13,7 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import byteinspace.net.eurexcommunicatordb.adapter.IndexAdapter;
 import byteinspace.net.eurexcommunicatordb.model.EurexIndexAdapter;
@@ -109,6 +111,19 @@ public class IndexTickerActivity extends AppCompatActivity implements AdapterVie
 
     @Override public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_index_ticker, menu);
+
+        MenuItem indicesMenuSpinner = menu.findItem(R.id.kurse);
+        setupKurse(indicesMenuSpinner);
+
         return true;
+    }
+
+    private void setupKurse(MenuItem item) {
+        View view = item.getActionView();
+        if (view instanceof  Spinner) {
+            Spinner spinner = (Spinner) view;
+            spinner.setAdapter(ArrayAdapter.createFromResource(this, R.array.menu_indices, android.R.layout.simple_spinner_dropdown_item));
+        }
+       // how to add a second drop down list to action bar in android-honeycomb
     }
 }
