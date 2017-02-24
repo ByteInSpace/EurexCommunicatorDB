@@ -7,11 +7,14 @@ package byteinspace.net.eurexcommunicatordb.service;
 public class ServiceFactory {
 
     private static NewsService newsService;
+    private static AuthenticationService authenticationService;
 
     private static ServiceFactory factory;
 
     private ServiceFactory() {
+
         newsService = new NewsService();
+        authenticationService = new AuthenticationService();
     }
 
     public static ServiceFactory getFactory() {
@@ -26,5 +29,7 @@ public class ServiceFactory {
     public static NewsService getNewsService() {
         return newsService;
     }
+
+    public static AuthenticationService getAuthenticationService() { return authenticationService;}
 
 }

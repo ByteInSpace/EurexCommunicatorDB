@@ -27,10 +27,11 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".NewsActivity"
+        <activity
+            android:name=".NewsActivity"
             android:label="@string/news_headline"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            ></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".HelloPrivateUserAcivity"></activity>
     </application>
 
 </manifest>

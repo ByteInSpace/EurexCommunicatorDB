@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_circulars"
+        android:title="@string/circulars"
+        />
+    <item
+        android:id="@+id/menu_mailings"
+        android:title="@string/mailings"
+        />
+    <item
+        android:id="@+id/menu_surverys"
+        android:title="@string/surweys"
+        />
+
+    <item
+        android:id="@+id/menu_tkam"
+        android:title="@string/contact_your_tkan"
+        />
+    <item
+        android:id="@+id/menu_invoices"
+        android:title="@string/invoices"
+    />
+    <item
+        android:id="@+id/menu_report_state"
+        android:title="@string/show_report_states"
+        />
+    <item
+        android:id="@+id/menu_notify_customer"
+        android:title="@string/notify_customer"
+        />
+</menu>

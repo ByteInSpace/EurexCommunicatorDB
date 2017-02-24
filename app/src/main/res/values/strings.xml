@@ -26,6 +26,13 @@
     <string name="username">Username</string>
     <string name="indices">Ind</string>
     <string name="news_headline">News</string>
+    <string name="circulars">Circulars</string>
+    <string name="mailings">Mailings</string>
+    <string name="surweys">Surveys</string>
+    <string name="contact_your_tkan">Contact your TKAM</string>
+    <string name="invoices">Invoices</string>
+    <string name="show_report_states">Show Report State</string>
+    <string name="notify_customer">Notify Customer</string>
 
     <string-array name="menu_indices">
         <item>Eurex Indizes</item>
