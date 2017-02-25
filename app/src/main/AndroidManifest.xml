@@ -36,10 +36,13 @@
             android:name=".CircularsActivity"
             android:label="@string/title_activity_circulars"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".MailingActivity"
+        <activity
+            android:name=".MailingActivity"
             android:label="@string/mailing_headline"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            ></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".EventActivity"
+            android:label="@string/events"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

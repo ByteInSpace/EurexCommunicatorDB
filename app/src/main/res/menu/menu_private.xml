@@ -10,6 +10,10 @@
         android:title="@string/mailings"
         />
     <item
+        android:id="@+id/menu_events"
+        android:title="@string/events"
+        />
+    <item
         android:id="@+id/menu_surverys"
         android:title="@string/surweys"
         />

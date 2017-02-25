@@ -41,4 +41,5 @@
     </string-array>
     <string name="title_activity_circulars">CircularsActivity</string>
     <string name="mailing_headline">Mailings</string>
+    <string name="events">Events</string>
 </resources>

@@ -38,21 +38,10 @@ public class BasePrivateActivity extends AppCompatActivity {
                     case R.id.menu_mailings:
                         showMailings();
                         return true;
-                    case R.id.eurexlogon:
-                        showLogon();
+                    case R.id.menu_events:
+                        showEvents();
                         return true;
-                    case R.id.xetralogon:
-                        showLogon();
-                        return true;
-                    case R.id.mainindices:
-                        showIndices(Constants.MAIN);
-                        return true;
-                    case R.id.futures:
-                        showIndices(Constants.FUTURES);
-                        return true;
-                    case R.id.options:
-                        showIndices(Constants.OPTIONS);
-                        return true;
+
                 }
                 return false;
             }
@@ -70,6 +59,13 @@ public class BasePrivateActivity extends AppCompatActivity {
     private void showMailings() {
         Intent intentReceived = getIntent();
         Intent intent = new Intent(this, MailingActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
+    }
+
+    private void showEvents() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, EventActivity.class);
         intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
         startActivity(intent);
     }

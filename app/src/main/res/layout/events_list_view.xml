@@ -5,28 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="byteinspace.net.eurexcommunicatordb.MailingActivity"
-    tools:showIn="@layout/activity_mailing">
+    tools:context="byteinspace.net.eurexcommunicatordb.EventActivity"
+
+   >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="3dp"
         android:background="@color/colorBackground"
+        android:descendantFocusability="blocksDescendants"
         >
 
-        <ImageView android:id="@+id/mailing_image"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="6dp"
-            android:layout_height="30dp"
-            android:layout_width="30dp"
-            android:clickable="false"
-            android:focusable="false"
-            android:layout_gravity="top"
-            android:focusableInTouchMode="false"
-            android:src="@drawable/eurex"
 
-            />
         <TableLayout
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -34,22 +25,25 @@
             >
             <TableRow>
 
-                <TextView android:id="@+id/mailing_headline"
+                <TextView android:id="@+id/event_date_headline"
                     android:layout_marginTop="4dp"
                     android:layout_width="40dp"
-                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorHeadline"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDate"
                     android:clickable="false"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="@dimen/text_size_small"
+
                     />
-                <TextView android:id="@+id/mailing_date"
+                <TextView android:id="@+id/event_coordinations"
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="4dp"
-                    android:layout_width="60dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/mailing_headline"
-                    android:textColor="@color/colorDate"
+                    android:layout_toRightOf="@id/event_date_headline"
+                    android:textColor="@color/colorSubHeadline"
                     android:clickable="false"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
@@ -60,27 +54,43 @@
                     />
             </TableRow>
             <TableRow>
-                <TextView android:id="@+id/mailing_text"
+                <TextView android:id="@+id/event_date"
                     android:layout_marginTop="4dp"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorSubHeadline"
+                    android:textColor="@color/colorDate"
                     android:clickable="false"
                     android:focusable="false"
-                    android:layout_width="220dp"
+                    android:layout_width="80dp"
                     android:focusableInTouchMode="false"
                     android:textSize="@dimen/text_size_small"
-
-
+                    android:textAppearance="?android:attr/textAppearanceSmall"
                     />
-
-                <ImageView
-                    android:id="@+id/mailing_favorite"
-                    android:layout_toRightOf="@id/mailing_text"
-                    android:layout_gravity="center"
+                <TextView android:id="@+id/event_headline"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/event_date"
+                    android:textColor="@color/colorHeadline"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:layout_weight="1"
                     />
             </TableRow>
 
         </TableLayout>
+        <ImageView android:id="@+id/events_register"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="6dp"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_gravity="top"
+            android:focusableInTouchMode="false"
+            />
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
