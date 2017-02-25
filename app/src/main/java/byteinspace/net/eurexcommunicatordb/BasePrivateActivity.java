@@ -1,6 +1,7 @@
 package byteinspace.net.eurexcommunicatordb;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -19,6 +20,7 @@ public class BasePrivateActivity extends AppCompatActivity {
     private Toolbar toolbar;
     protected User user;
 
+
     protected void showToolbar(Toolbar toolbar) {
 
         this.toolbar = toolbar;
@@ -30,11 +32,11 @@ public class BasePrivateActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.news:
-                        showNews();
+                    case R.id.menu_circulars:
+                        showCirculars();
                         return true;
-                    case R.id.eurexclearinglogon:
-                        showLogon();
+                    case R.id.menu_mailings:
+                        showMailings();
                         return true;
                     case R.id.eurexlogon:
                         showLogon();
@@ -58,6 +60,23 @@ public class BasePrivateActivity extends AppCompatActivity {
     }
 
 
+    private void showCirculars() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, CircularsActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
+    }
+
+    private void showMailings() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, MailingActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
+    }
+
+
+
+
     private void showNews() {
         Intent intent = new Intent(this, NewsActivity.class);
         startActivity(intent);
@@ -79,6 +98,7 @@ public class BasePrivateActivity extends AppCompatActivity {
     }
 
     @Override public boolean onCreateOptionsMenu(Menu menu){
+        setUpUser();
         getMenuInflater().inflate(R.menu.menu_private, menu);
         if (!user.isRightSet(AuthenticationService.RIGHT_NOTIFY_CUSTOMER)) {
             MenuItem item = menu.findItem(R.id.menu_notify_customer);

@@ -1,27 +1,17 @@
 package byteinspace.net.eurexcommunicatordb;
 
-import android.app.ListActivity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
 
 import byteinspace.net.eurexcommunicatordb.adapter.IndexAdapter;
-import byteinspace.net.eurexcommunicatordb.model.EurexIndexAdapter;
-import byteinspace.net.eurexcommunicatordb.model.FuturesAdapter;
+import byteinspace.net.eurexcommunicatordb.adapter.EurexIndexAdapter;
+import byteinspace.net.eurexcommunicatordb.adapter.FuturesAdapter;
 import byteinspace.net.eurexcommunicatordb.model.Index;
-import byteinspace.net.eurexcommunicatordb.model.OptionsAdapter;
+import byteinspace.net.eurexcommunicatordb.adapter.OptionsAdapter;
 
 public class IndexTickerActivity extends BasePublicActivity implements AdapterView.OnItemClickListener {
 

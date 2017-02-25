@@ -31,7 +31,15 @@
             android:name=".NewsActivity"
             android:label="@string/news_headline"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".HelloPrivateUserAcivity"></activity>
+        <activity android:name=".HelloPrivateUserAcivity" />
+        <activity
+            android:name=".CircularsActivity"
+            android:label="@string/title_activity_circulars"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".MailingActivity"
+            android:label="@string/mailing_headline"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            ></activity>
     </application>
 
 </manifest>

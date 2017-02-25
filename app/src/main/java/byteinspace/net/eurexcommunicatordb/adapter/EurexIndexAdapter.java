@@ -1,4 +1,4 @@
-package byteinspace.net.eurexcommunicatordb.model;
+package byteinspace.net.eurexcommunicatordb.adapter;
 
 import android.content.Context;
 

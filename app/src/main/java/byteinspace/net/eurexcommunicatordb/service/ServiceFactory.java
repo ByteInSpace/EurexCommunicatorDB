@@ -8,6 +8,7 @@ public class ServiceFactory {
 
     private static NewsService newsService;
     private static AuthenticationService authenticationService;
+    private static MailingService mailingService;
 
     private static ServiceFactory factory;
 
@@ -15,6 +16,7 @@ public class ServiceFactory {
 
         newsService = new NewsService();
         authenticationService = new AuthenticationService();
+        mailingService = new MailingService();
     }
 
     public static ServiceFactory getFactory() {
@@ -31,5 +33,7 @@ public class ServiceFactory {
     }
 
     public static AuthenticationService getAuthenticationService() { return authenticationService;}
+
+    public static MailingService getMailingService() { return mailingService;}
 
 }
