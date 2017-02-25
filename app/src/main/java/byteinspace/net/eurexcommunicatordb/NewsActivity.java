@@ -25,8 +25,6 @@ public class NewsActivity extends BasePublicActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.news_toolbar);
 
         lv = (ListView) findViewById(R.id.newslist);
