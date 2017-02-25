@@ -4,8 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -27,7 +29,6 @@ public class NewsAdapter extends BaseAdapter {
     public NewsAdapter(Context context) {
         inflator = LayoutInflater.from(context);
         news = ServiceFactory.getFactory().getNewsService().getAllNewsOrderedByDate();
-
     }
 
 
@@ -52,6 +53,7 @@ public class NewsAdapter extends BaseAdapter {
 
         if (convertView == null) {
             convertView = inflator.inflate(R.layout.news_list_view, parent, false);
+
             holder = new ViewHolder();
             holder.news_date = (TextView) convertView.findViewById(R.id.news_date);
             holder.news_type = (TextView) convertView.findViewById(R.id.news_type);
