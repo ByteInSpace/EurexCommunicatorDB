@@ -14,6 +14,7 @@ public class News {
     private NEWS_TYPE type;
     private String author;
     private String image;
+    private String url;
 
     public String getHeadline() {
         return headline;
@@ -55,5 +56,13 @@ public class News {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

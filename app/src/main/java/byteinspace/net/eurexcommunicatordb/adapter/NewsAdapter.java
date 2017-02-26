@@ -72,12 +72,7 @@ public class NewsAdapter extends BaseAdapter {
         holder.news_image.setImageResource(R.drawable.news1);
 
         convertView.setFocusable(false);
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Hier bin ich");
-            }
-        });
+
         return convertView;
 
 

@@ -20,6 +20,7 @@ public class NewsService {
         news1.setAuthor("Eurex Group");
         news1.setType(News.NEWS_TYPE.Presse);
         news1.setImage("news1.png");
+        news1.setUrl("http://www.eurexchange.com/exchange-de/ueber-uns/news/Marktteilnehmer-setzen-angesichts-geopolitischer-Risiken-auf-Eurex-Zins-Futures/2899980");
         news.add(news1);
 
         News news2 = new News();
@@ -28,6 +29,7 @@ public class NewsService {
         news2.setAuthor("Eurex Exchange");
         news2.setType(News.NEWS_TYPE.Focus);
         news2.setImage("news2.png");
+        news2.setUrl("http://www.eurexchange.com/exchange-de/ueber-uns/news/Eurex-Exchange-und-DEGIRO-beschliessen-Partnerschaft/2889050");
         news.add(news2);
 
         News news3 = new News();
@@ -36,6 +38,7 @@ public class NewsService {
         news3.setAuthor("Eurex Exchange");
         news3.setType(News.NEWS_TYPE.Presse);
         news3.setImage("news3.png");
+        news3.setUrl("http://www.eurexchange.com/exchange-de/ueber-uns/news/Eurex-Boersenrat-waehlt-Carola-Graefin-von-Schmettow-zur-Vorsitzenden/2888114");
         news.add(news3);
 
         News news4 = new News();
@@ -43,6 +46,7 @@ public class NewsService {
         news4.setHeadline("WH SelfInvest: Heimspiel für Trader");
         news4.setAuthor("Eurex Exchange");
         news4.setType(News.NEWS_TYPE.Focus);
+        news4.setUrl("http://www.eurexchange.com/exchange-de/ueber-uns/news/wh-selfinvest/2887570");
         news4.setImage("news1.png");
 
         news.add(news4);

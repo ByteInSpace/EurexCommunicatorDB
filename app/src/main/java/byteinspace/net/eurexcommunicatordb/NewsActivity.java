@@ -1,6 +1,7 @@
 package byteinspace.net.eurexcommunicatordb;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -30,12 +31,16 @@ public class NewsActivity extends BasePublicActivity implements AdapterView.OnIt
         lv = (ListView) findViewById(R.id.newslist);
         adapter = new NewsAdapter(this);
         lv.setAdapter(adapter);
-        lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(NewsActivity.this, "You Clicked ", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(NewsActivity.this, "You Clicked ", Toast.LENGTH_SHORT).show();
+                News news = (News) adapter.getItem(position);
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(news.getUrl()));
+                startActivity(i);
             }
         });
         showToolbar(toolbar);
