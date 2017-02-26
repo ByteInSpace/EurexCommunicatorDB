@@ -5,8 +5,9 @@ package byteinspace.net.eurexcommunicatordb.model;
  */
 
 public class Index {
+    private String name;
+
     private boolean favourite = false;
-    private final String name;
     private double last_rate;
     private double increase_descrease = 0d;
 
@@ -31,5 +32,6 @@ public class Index {
     public double getIncreaseDecrease() {
         return this.increase_descrease;
     }
+
 
 }

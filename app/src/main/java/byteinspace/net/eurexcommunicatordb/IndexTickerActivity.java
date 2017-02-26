@@ -17,7 +17,6 @@ public class IndexTickerActivity extends BasePublicActivity implements AdapterVi
 
     private ListView lv;
     private IndexAdapter eurexIndexAdapter;
-    private IndexAdapter futuresAdapter;
     private IndexAdapter adapter;
     private IndexAdapter optionsAdapter;
 
@@ -29,7 +28,6 @@ public class IndexTickerActivity extends BasePublicActivity implements AdapterVi
         setContentView(R.layout.activity_index_ticker);
 
         eurexIndexAdapter = new EurexIndexAdapter(this);
-        futuresAdapter = new FuturesAdapter(this);
         optionsAdapter = new OptionsAdapter(this);
 
         Intent intent = getIntent();
@@ -59,10 +57,7 @@ public class IndexTickerActivity extends BasePublicActivity implements AdapterVi
                 lv.setAdapter(eurexIndexAdapter);
                 adapter = eurexIndexAdapter;
                 return;
-            case Constants.FUTURES:
-                lv.setAdapter(futuresAdapter);
-                adapter = futuresAdapter;
-                return;
+
             case Constants.OPTIONS:
                 lv.setAdapter(optionsAdapter);
                 adapter = optionsAdapter;

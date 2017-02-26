@@ -40,9 +40,11 @@
             android:name=".MailingActivity"
             android:label="@string/mailing_headline"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".EventActivity"
+        <activity
+            android:name=".EventActivity"
             android:label="@string/events"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".FuturesOverviewActivity"></activity>
     </application>
 
 </manifest>

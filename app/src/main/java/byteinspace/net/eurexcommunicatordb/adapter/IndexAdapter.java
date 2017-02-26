@@ -27,6 +27,8 @@ public abstract class IndexAdapter extends BaseAdapter {
 
 
 
+
+
     public IndexAdapter(Context context) {
         inflator = LayoutInflater.from(context);
         indices = new ArrayList<>();

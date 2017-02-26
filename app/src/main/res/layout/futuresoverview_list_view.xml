@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    android:background="@color/colorBackground"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:descendantFocusability="blocksDescendants"
+    >
+    <TableLayout
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:clickable="false"
+        android:focusable="false"
+
+        >
+        <TableRow
+            android:clickable="false"
+            android:focusable="false">
+            <TextView android:id="@+id/futures_name"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorHeadline"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_weight="0"
+                android:textIsSelectable="false"
+                />
+        </TableRow>
+        <TableRow
+            android:clickable="false"
+            android:focusable="false">
+            <TextView android:id="@+id/futures_intervall"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorSubHeadline"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textIsSelectable="false"
+                />
+        </TableRow>
+    </TableLayout>
+
+            <TextView android:id="@+id/future_price"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="60dp"
+                 android:layout_height="wrap_content"
+                android:textColor="@color/colorHeadline"
+                                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textIsSelectable="false"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size_small"
+                />
+
+    <TextView android:id="@+id/future_rate"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorHeadline"
+        android:layout_toRightOf="@id/future_price"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textIsSelectable="false"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_small"
+        />
+
+
+
+</LinearLayout>
+
+

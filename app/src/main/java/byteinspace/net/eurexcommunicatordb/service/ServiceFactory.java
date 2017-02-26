@@ -10,6 +10,7 @@ public class ServiceFactory {
     private static AuthenticationService authenticationService;
     private static MailingService mailingService;
     private static EventService eventService;
+    private static FuturesService indexService;
 
     private static ServiceFactory factory;
 
@@ -19,6 +20,7 @@ public class ServiceFactory {
         authenticationService = new AuthenticationService();
         mailingService = new MailingService();
         eventService = new EventService();
+        indexService = new FuturesService();
     }
 
     public static ServiceFactory getFactory() {
@@ -39,5 +41,7 @@ public class ServiceFactory {
     public static MailingService getMailingService() { return mailingService;}
 
     public static EventService getEventService() { return eventService; }
+
+    public static FuturesService getFuturesService() { return indexService; }
 
 }

@@ -40,7 +40,7 @@ public abstract class BasePublicActivity extends AppCompatActivity {
                         showIndices(Constants.MAIN);
                         return true;
                     case R.id.futures:
-                        showIndices(Constants.FUTURES);
+                        showFutures();
                         return true;
                     case R.id.options:
                         showIndices(Constants.OPTIONS);
@@ -59,6 +59,11 @@ public abstract class BasePublicActivity extends AppCompatActivity {
     private void showIndices(String target) {
         Intent intent = new Intent(this, IndexTickerActivity.class);
         intent.putExtra(Constants.KEY, target);
+        startActivity(intent);
+    }
+
+    private void showFutures() {
+        Intent intent = new Intent(this, FuturesOverviewActivity.class);
         startActivity(intent);
     }
 
