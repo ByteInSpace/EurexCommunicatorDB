@@ -43,18 +43,22 @@
         <activity
             android:name=".EventActivity"
             android:label="@string/events"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+             />
         <activity android:name=".FuturesOverviewActivity" />
         <activity android:name=".EventRegisterActivity" />
-        <activity android:name=".SurveysActivity"
-        android:label="@string/surveys"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
-        ></activity>
-
-        <activity android:name=".SurveyDetailActivity"
+        <activity
+            android:name=".SurveysActivity"
             android:label="@string/surveys"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            ></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".SurveyDetailActivity"
+            android:label="@string/surveys"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".InvoicesActivity"
+            android:label="@string/invoice"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".ReportActivity"></activity>
     </application>
 
 </manifest>

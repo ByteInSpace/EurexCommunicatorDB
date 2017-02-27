@@ -3,6 +3,7 @@ package byteinspace.net.eurexcommunicatordb;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,6 +45,12 @@ public class BasePrivateActivity extends AppCompatActivity {
                     case R.id.menu_surverys:
                         showSurveys();
                         return true;
+                    case R.id.menu_invoices:
+                        showInvoices();
+                        return true;
+                    case R.id.menu_report_state:
+                        showReports();
+                        return true;
 
                 }
                 return false;
@@ -62,6 +69,20 @@ public class BasePrivateActivity extends AppCompatActivity {
     private void showMailings() {
         Intent intentReceived = getIntent();
         Intent intent = new Intent(this, MailingActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
+    }
+
+    private void showInvoices() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, InvoicesActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
+    }
+
+    private void showReports() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, ReportActivity.class);
         intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
         startActivity(intent);
     }
@@ -106,6 +127,10 @@ public class BasePrivateActivity extends AppCompatActivity {
     @Override public boolean onCreateOptionsMenu(Menu menu){
         setUpUser();
         getMenuInflater().inflate(R.menu.menu_private, menu);
+        if (menu instanceof MenuBuilder) {
+            MenuBuilder m = (MenuBuilder) menu;
+            ((MenuBuilder) menu).setOptionalIconsVisible(true);
+        }
         if (!user.isRightSet(AuthenticationService.RIGHT_NOTIFY_CUSTOMER)) {
             MenuItem item = menu.findItem(R.id.menu_notify_customer);
             item.setVisible(false);

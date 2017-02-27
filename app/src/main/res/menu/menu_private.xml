@@ -21,7 +21,18 @@
     <item
         android:id="@+id/menu_tkam"
         android:title="@string/contact_your_tkan"
-        />
+        >
+        <menu>
+            <item
+                android:id="@+id/menu_call"
+                android:title="@string/call"
+                />
+            <item
+                android:id="@+id/menu_chat"
+                android:title="@string/chat"
+                />
+        </menu>
+    </item>
     <item
         android:id="@+id/menu_invoices"
         android:title="@string/invoices"
@@ -29,9 +40,54 @@
     <item
         android:id="@+id/menu_report_state"
         android:title="@string/show_report_states"
+        android:icon="@drawable/kurs"
         />
     <item
         android:id="@+id/menu_notify_customer"
         android:title="@string/notify_customer"
+        />
+
+    <item
+        android:id="@+id/menu_calculator"
+        android:title="@string/calculator"
+        >
+    <menu>
+        <item
+            android:id="@+id/menu_margin"
+            android:title="@string/margin"
+            />
+        <item
+            android:id="@+id/menu_fee"
+            android:title="@string/fee"
+            />
+    </menu>
+    </item>
+    <item
+        android:id="@+id/menu_incident"
+        android:title="@string/incident"
+        />
+    <item
+        android:id="@+id/menu_game"
+        android:title="@string/game"
+        />
+    <item
+        android:id="@+id/menu_knowledge"
+        android:title="@string/knowledge"
+        >
+    <menu>
+        <item
+        android:id="@+id/menu_faq"
+        android:title="@string/faq"
+        />
+        <item
+            android:id="@+id/menu_dictionary"
+            android:title="@string/dictionary"
+            />
+    </menu>
+
+    </item>
+    <item
+        android:id="@+id/menu_settings"
+        android:title="@string/settings"
         />
 </menu>

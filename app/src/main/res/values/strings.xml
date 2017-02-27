@@ -31,7 +31,7 @@
     <string name="surweys">Surveys</string>
     <string name="contact_your_tkan">Contact your TKAM</string>
     <string name="invoices">Invoices</string>
-    <string name="show_report_states">Show Report State</string>
+    <string name="show_report_states">Pending Reports</string>
     <string name="notify_customer">Notify Customer</string>
 
     <string-array name="menu_indices">
@@ -47,4 +47,17 @@
     <string name="ort">Ort:</string>
     <string name="datum">Datum:</string>
     <string name="surveys">Surveys</string>
+    <string name="invoice">Invoice</string>
+    <string name="knowledge">Knowledge Base</string>
+    <string name="faq">FAQ</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="game">Game</string>
+    <string name="incident">Incident state</string>
+    <string name="margin">Margin Calculator</string>
+    <string name="calculator">Calculator</string>
+    <string name="fee">Fee</string>
+    <string name="call">Phone Call</string>
+    <string name="chat">Online Chat</string>
+    <string name="settings">Settings</string>
+
 </resources>

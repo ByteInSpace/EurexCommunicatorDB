@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp"
+    android:background="@color/colorBackground"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+
+    <TableLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingBottom="6dp"
+        >
+
+        <TableRow>
+            <TextView android:id="@+id/rep_time"
+                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDate"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_width="80dp"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/text_size_small"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+            <TextView android:id="@+id/rep_title"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/rep_time"
+                android:textColor="@color/colorHeadline"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                android:layout_weight="1"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
