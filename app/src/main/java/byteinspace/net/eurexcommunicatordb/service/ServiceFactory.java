@@ -11,6 +11,7 @@ public class ServiceFactory {
     private static MailingService mailingService;
     private static EventService eventService;
     private static FuturesService indexService;
+    private static SurveyService surveyService;
 
     private static ServiceFactory factory;
 
@@ -21,6 +22,7 @@ public class ServiceFactory {
         mailingService = new MailingService();
         eventService = new EventService();
         indexService = new FuturesService();
+        surveyService = new SurveyService();
     }
 
     public static ServiceFactory getFactory() {
@@ -44,4 +46,5 @@ public class ServiceFactory {
 
     public static FuturesService getFuturesService() { return indexService; }
 
+    public static SurveyService getSurveyService() { return surveyService; }
 }

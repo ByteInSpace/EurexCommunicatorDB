@@ -46,4 +46,5 @@
     <string name="nachname">Nachname</string>
     <string name="ort">Ort:</string>
     <string name="datum">Datum:</string>
+    <string name="surveys">Surveys</string>
 </resources>

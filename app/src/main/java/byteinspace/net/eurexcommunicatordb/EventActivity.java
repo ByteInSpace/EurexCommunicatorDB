@@ -43,7 +43,6 @@ public class EventActivity extends BasePrivateActivity {
     }
 
     private void showEventRegistration(long id) {
-        System.out.println("Starting");
         Intent intentReceived = getIntent();
         Intent intent = new Intent(this, EventRegisterActivity.class);
         intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));

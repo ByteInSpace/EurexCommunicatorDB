@@ -46,7 +46,15 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".FuturesOverviewActivity" />
         <activity android:name=".EventRegisterActivity" />
-        <activity android:name=".SurveysActivity"></activity>
+        <activity android:name=".SurveysActivity"
+        android:label="@string/surveys"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        ></activity>
+
+        <activity android:name=".SurveyDetailActivity"
+            android:label="@string/surveys"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            ></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,276 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorBackground"
+    tools:context="byteinspace.net.eurexcommunicatordb.EventRegisterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar_srv_detail"
+        android:elevation="4dp"
+        android:background="@color/colorPrimary"
+    >
+    </android.support.v7.widget.Toolbar>
+
+    <TextView android:id="@+id/srv_detail_name"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorHeadline"
+        android:layout_below="@id/toolbar_srv_detail"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:maxLines="1"
+        />
+
+    <TextView android:id="@+id/srv_detail_areaname"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorSubHeadline"
+        android:layout_below="@id/srv_detail_name"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:maxLines="1"
+        android:text="General"
+        />
+
+       <TextView android:id="@+id/srv_detail_question1"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorHeadline"
+           android:layout_below="@id/srv_detail_areaname"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Which of the following statements describes best your derivatives activity?"
+                />
+
+    <RadioGroup
+        android:id="@+id/srvgroup_q1_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/srv_detail_question1"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/srvdetail_q1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Active in both OTC and listed derivatives"
+            android:buttonTint="@color/colorPrimary"
+            />
+        <RadioButton android:id="@+id/srvdetail_q1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Primarily active in OTC derivatives"
+            android:buttonTint="@color/colorPrimary"
+            />
+        <RadioButton android:id="@+id/srvdetail_q1_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Primarily active in listed derivatives"
+            android:buttonTint="@color/colorPrimary"
+            />
+    </RadioGroup>
+
+    <TextView android:id="@+id/srv_detail_question2"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorHeadline"
+        android:layout_below="@id/srvgroup_q1_1"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="Which of the following statements best describes your OTC Interest Rate Swaps portfolio?"/>
+
+    <RadioGroup
+        android:id="@+id/srvgroup_q2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/srv_detail_question2"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/srvdetail_q2_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Directional fixed receiver portfolio"
+            android:buttonTint="@color/colorPrimary"
+            />
+        <RadioButton android:id="@+id/srvdetail_q2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Directional fixed payer portfolio"
+            android:buttonTint="@color/colorPrimary"
+            />
+        <RadioButton android:id="@+id/srvdetail_q2_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Balanced portfolio with fixed payer and receiver swaps"
+            android:buttonTint="@color/colorPrimary"
+            />
+    </RadioGroup>
+
+    <TextView android:id="@+id/srv_detail_question3"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorHeadline"
+        android:layout_below="@id/srvgroup_q2"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="How important are the following aspects when choosing your CCP for clearing your OTC derivatives?"/>
+
+    <TableLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/srv_detail_question3"
+        android:layout_alignParentStart="true">
+
+        <TableRow>
+            <TextView android:id="@+id/srv_detail_question4_1"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorHeadline"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/text_size_small"
+                android:text="Liquidity – bid-ask spread, general volume"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/srv_detail_question4_1"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/srvdetail_q4_1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="1"
+                android:buttonTint="@color/colorPrimary"
+                />
+            <RadioButton android:id="@+id/srvdetail_q4_1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="2"
+                android:buttonTint="@color/colorPrimary"
+                />
+            <RadioButton android:id="@+id/srvdetail_q4_1_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="3"
+                android:buttonTint="@color/colorPrimary"
+                />
+
+        </RadioGroup>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/srv_detail_question4_2"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorHeadline"
+                android:clickable="false"
+                android:focusable="false"
+                android:textSize="@dimen/text_size_small"
+                android:focusableInTouchMode="false"
+                android:text="Asset protection strategy – porting, default management"/>
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/srvdetail_q4_2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="1"
+                    android:buttonTint="@color/colorPrimary"
+                    />
+                <RadioButton android:id="@+id/srvdetail_q4_2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="2"
+                    android:buttonTint="@color/colorPrimary"
+                    />
+                <RadioButton android:id="@+id/srvdetail_q4_2_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="3"
+                    android:buttonTint="@color/colorPrimary"
+                    />
+
+            </RadioGroup>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/srv_detail_question4_3"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorHeadline"
+                android:clickable="false"
+                android:focusable="false"
+                android:textSize="@dimen/text_size_small"
+                android:focusableInTouchMode="false"
+                android:text="Risk management standards – sufficient margin, adequately scaled default fund"/>
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/srvdetail_q4_3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="1"
+                    android:buttonTint="@color/colorPrimary"
+                    />
+                <RadioButton android:id="@+id/srvdetail_q4_3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="2"
+                    android:buttonTint="@color/colorPrimary"
+                    />
+                <RadioButton android:id="@+id/srvdetail_q4_3_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="3"
+                    android:buttonTint="@color/colorPrimary"
+
+                    />
+
+            </RadioGroup>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
