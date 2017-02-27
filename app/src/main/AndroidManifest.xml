@@ -45,7 +45,8 @@
             android:label="@string/events"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".FuturesOverviewActivity" />
-        <activity android:name=".EventRegisterActivity"></activity>
+        <activity android:name=".EventRegisterActivity" />
+        <activity android:name=".SurveysActivity"></activity>
     </application>
 
 </manifest>

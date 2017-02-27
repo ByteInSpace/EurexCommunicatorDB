@@ -41,6 +41,9 @@ public class BasePrivateActivity extends AppCompatActivity {
                     case R.id.menu_events:
                         showEvents();
                         return true;
+                    case R.id.menu_surverys:
+                        showSurveys();
+                        return true;
 
                 }
                 return false;
@@ -66,6 +69,13 @@ public class BasePrivateActivity extends AppCompatActivity {
     private void showEvents() {
         Intent intentReceived = getIntent();
         Intent intent = new Intent(this, EventActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
+    }
+
+    private void showSurveys() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, SurveysActivity.class);
         intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
         startActivity(intent);
     }
