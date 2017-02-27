@@ -20,6 +20,7 @@ public class MailingService {
         mailing1.setRead(false);
         mailing1.setTitel("Preisänderung für ausgewählte Teilnehmer");
         mailing1.setText("Mit dem 25. Februar werden die Preise gesenkt...");
+        mailing1.setUrl("http://www.eurexchange.com/exchange-en/");
         mailings.add(mailing1);
 
         Mailing mailing2 = new Mailing();
@@ -27,6 +28,7 @@ public class MailingService {
         mailing2.setRead(true);
         mailing2.setTitel("Treffen in der Deutschen Börse");
         mailing2.setText("Ein persönliches Treffen mit den Führungskräften...");
+        mailing2.setUrl("http://www.eurexchange.com/exchange-en/");
         mailings.add(mailing2);
 
         Mailing mailing3 = new Mailing();
@@ -34,6 +36,7 @@ public class MailingService {
         mailing3.setRead(false);
         mailing3.setTitel("Firmenauto für jeden");
         mailing3.setText("Möchten Sie lieber einen BMW oder einen Audi ...");
+        mailing3.setUrl("http://www.eurexchange.com/exchange-en/");
         mailings.add(mailing3);
 
         Mailing mailing4 = new Mailing();
@@ -41,6 +44,7 @@ public class MailingService {
         mailing4.setRead(true);
         mailing4.setTitel("Neues Spiel für alle Teilnehmer");
         mailing4.setText("Gewinnen Sie eine Reise nach Eurexland ...");
+        mailing4.setUrl("http://www.eurexchange.com/exchange-en/");
         mailings.add(mailing4);
     }
 

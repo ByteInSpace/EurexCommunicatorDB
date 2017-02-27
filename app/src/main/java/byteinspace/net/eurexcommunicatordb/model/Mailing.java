@@ -10,6 +10,7 @@ public class Mailing {
     private boolean read;
     private String titel;
     private String text;
+    private String url;
 
     public String getDatum() {
         return datum;
@@ -41,5 +42,13 @@ public class Mailing {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

@@ -75,12 +75,7 @@ public class MailingsAdapter  extends BaseAdapter {
         holder.mailing_favorite.setImageResource(R.drawable.favorite);
 
         convertView.setFocusable(false);
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Hier bin ich");
-            }
-        });
+
         return convertView;
 
 

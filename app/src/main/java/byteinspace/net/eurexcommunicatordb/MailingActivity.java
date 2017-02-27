@@ -1,5 +1,7 @@
 package byteinspace.net.eurexcommunicatordb;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -8,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import byteinspace.net.eurexcommunicatordb.adapter.MailingsAdapter;
+import byteinspace.net.eurexcommunicatordb.model.Mailing;
 
 public class MailingActivity extends BasePrivateActivity {
 
@@ -25,12 +28,13 @@ public class MailingActivity extends BasePrivateActivity {
 
         lv = (ListView) findViewById(R.id.list_mailings);
         lv.setAdapter(adapter);
-        lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        lv.setFocusable(false);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                System.out.println("TEST");
+                Mailing mailing = (Mailing) adapter.getItem(position);
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(mailing.getUrl()));
+                startActivity(i);
             }
         });
 
