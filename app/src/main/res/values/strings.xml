@@ -42,4 +42,8 @@
     <string name="title_activity_circulars">CircularsActivity</string>
     <string name="mailing_headline">Mailings</string>
     <string name="events">Events</string>
+    <string name="vorname">Vorname</string>
+    <string name="nachname">Nachname</string>
+    <string name="ort">Ort:</string>
+    <string name="datum">Datum:</string>
 </resources>

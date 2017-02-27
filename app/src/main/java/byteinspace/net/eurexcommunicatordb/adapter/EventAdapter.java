@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Collection;
 import java.util.List;
 
 import byteinspace.net.eurexcommunicatordb.R;
@@ -81,12 +82,7 @@ public class EventAdapter extends BaseAdapter {
 
 
         convertView.setFocusable(false);
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Hier bin ich");
-            }
-        });
+
         return convertView;
 
 

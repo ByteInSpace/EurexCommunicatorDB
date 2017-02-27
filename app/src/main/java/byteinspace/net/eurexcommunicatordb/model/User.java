@@ -14,6 +14,8 @@ public class User {
 
     private Map<String, Boolean> rights = new HashMap<>();
     private String name;
+    private String vorname;
+    private String familienname;
 
     public Boolean isRightSet(String rightstring) {
         Boolean right = rights.get(rightstring);
@@ -35,5 +37,19 @@ public class User {
         this.name = name;
     }
 
+    public String getVorname() {
+        return vorname;
+    }
 
+    public void setVorname(String vorname) {
+        this.vorname = vorname;
+    }
+
+    public String getFamilienname() {
+        return familienname;
+    }
+
+    public void setFamilienname(String familienname) {
+        this.familienname = familienname;
+    }
 }

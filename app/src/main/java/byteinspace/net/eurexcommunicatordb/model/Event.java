@@ -11,6 +11,8 @@ public class Event {
     private String place;
     private String area;
     private String title;
+    private int id;
+
     private EventService.EVENT_AVAILABILITY availability;
 
     public String getDatum() {
@@ -51,5 +53,13 @@ public class Event {
 
     public void setAvailability(EventService.EVENT_AVAILABILITY availability) {
         this.availability = availability;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

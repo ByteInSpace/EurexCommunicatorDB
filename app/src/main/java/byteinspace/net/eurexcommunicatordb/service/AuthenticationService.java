@@ -30,16 +30,21 @@ public class AuthenticationService {
         user.setRight(RIGHT_INVOICE, true);
         user.setRight(RIGHT_REPORT, true);
         user.setName("Daniel");
+        user.setVorname("Daniel");
+        user.setFamilienname("Ludwig");
 
         users.put("user", user);
 
         User tkam = new User();
         tkam.setRight(RIGHT_NOTIFY_CUSTOMER, true);
         tkam.setName("Siegbert");
+        tkam.setVorname("Siegbert");
+        tkam.setFamilienname("Banane");
         users.put("tkam", tkam);
 
 
     }
+
 
 
     public static User getUser(String userid) {
