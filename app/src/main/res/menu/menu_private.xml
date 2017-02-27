@@ -4,6 +4,7 @@
     <item
         android:id="@+id/menu_circulars"
         android:title="@string/circulars"
+        android:icon="@drawable/circular"
         />
     <item
         android:id="@+id/menu_mailings"

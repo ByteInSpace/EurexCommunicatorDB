@@ -30,7 +30,7 @@
         <activity
             android:name=".NewsActivity"
             android:label="@string/news_headline"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/EurexCommunicatorTheme" />
         <activity android:name=".HelloPrivateUserAcivity" />
         <activity
             android:name=".CircularsActivity"

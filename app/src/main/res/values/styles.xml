@@ -2,15 +2,38 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
     <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="PopupOverlay" parent="ThemeOverlay.AppCompat" />
 
+    <!-- Base application theme. -->
 
+    <style name="EurexCommunicatorTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:popupMenuStyle">@style/MyApp.PopupMenu</item>
+       </style>
+
+    <style name="MyApp.PopupMenu" parent="android:Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@color/bar_background</item>
+    </style>
+
+
+
+    <style name="EurexCommunicatorToolbarStyle">
+        <item name="android:maxHeight">@dimen/abc_action_bar_default_height_material</item>
+        <item name="android:listPreferredItemHeight">5dp</item>
+        <item name="android:background">@color/bar_background</item>
+        <item name="android:textColorPrimary">@color/bar_text</item>
+        <item name="android:textColorSecondary">@color/bar_text</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="actionMenuTextColor">@color/bar_text</item>
+    </style>
+
+    <style name="EurexCommunicatorMenu" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/menu_background</item>
+        <item name="android:textColor">@color/menu_text</item>
+    </style>
 </resources>

@@ -4,37 +4,30 @@
 
     <item
         android:id="@+id/news"
-        android:icon="@drawable/news"
-        app:showAsAction="ifRoom"
+        android:icon="@drawable/newspaper"
         android:title="News">
     </item>
 
-    <item
-        android:id="@+id/indices"
-        android:icon="@drawable/kurs"
-        app:showAsAction="ifRoom"
-        android:title="Indices">
-    <menu>
-        <item
+     <item
             android:id="@+id/mainindices"
             android:title="@string/title_activity_ticker_main"
+         android:icon="@drawable/chart"
             />
         <item
             android:id="@+id/futures"
             android:title="@string/futures"
+            android:icon="@drawable/chart"
             />
         <item
             android:id="@+id/options"
             android:title="@string/options"
+            android:icon="@drawable/chart"
             />
 
-    </menu>
-    </item>
 
     <item
         android:id="@+id/logon"
-        android:icon="@drawable/logon"
-        app:showAsAction="ifRoom"
+        android:icon="@drawable/key"
         android:title="Member Logon">
         <menu>
             <item

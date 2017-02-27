@@ -2,6 +2,7 @@ package byteinspace.net.eurexcommunicatordb;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -44,6 +45,11 @@ public class NewsActivity extends BasePublicActivity implements AdapterView.OnIt
             }
         });
         showToolbar(toolbar);
+        drawerList = (ListView)findViewById(R.id.navList);
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mActivityTitle = getTitle().toString();
+        createDrawer();
+
     }
 
 
