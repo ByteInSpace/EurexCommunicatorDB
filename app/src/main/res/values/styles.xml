@@ -36,4 +36,15 @@
         <item name="android:colorBackground">@color/menu_background</item>
         <item name="android:textColor">@color/menu_text</item>
     </style>
+
+    <style name="EurexCommunicatorDrawerStyle">
+        <item name="android:background">@color/menu_background</item>
+        <item name="android:textColor">@color/menu_text</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:gravity">center_vertical</item>
+     </style>
+    <style name="EurexCommunicatorMenuTextStyle">
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">left|center</item>
+    </style>
 </resources>

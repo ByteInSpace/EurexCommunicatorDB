@@ -1,5 +1,6 @@
 package byteinspace.net.eurexcommunicatordb;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -19,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import byteinspace.net.eurexcommunicatordb.adapter.NewsAdapter;
+import byteinspace.net.eurexcommunicatordb.adapter.PublicDrawerAdapter;
 import byteinspace.net.eurexcommunicatordb.model.News;
 
 /**
@@ -47,16 +49,16 @@ public abstract class BasePublicActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
 
-        createDrawer();
+        createDrawer(this);
 
     }
 
     protected abstract int getContentView() ;
 
-    protected void createDrawer() {
+    protected void createDrawer(Context context) {
         String[] osArray = { "Android", "iOS", "Windows", "OS X", "Linux" };
         drawerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
-        drawerList.setAdapter(drawerAdapter);
+        drawerList.setAdapter(new PublicDrawerAdapter(context));
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);

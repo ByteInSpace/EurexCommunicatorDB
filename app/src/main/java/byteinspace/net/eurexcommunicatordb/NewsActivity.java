@@ -43,7 +43,6 @@ public class NewsActivity extends BasePublicActivity implements AdapterView.OnIt
             }
         });
 
-        createDrawer();
 
     }
 
