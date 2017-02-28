@@ -31,7 +31,6 @@ public abstract class BasePublicActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     protected ListView drawerList;
-    private ArrayAdapter<String> drawerAdapter;
 
     private ActionBarDrawerToggle mDrawerToggle;
     protected DrawerLayout mDrawerLayout;
@@ -57,7 +56,6 @@ public abstract class BasePublicActivity extends AppCompatActivity {
 
     protected void createDrawer(Context context) {
         String[] osArray = { "Android", "iOS", "Windows", "OS X", "Linux" };
-        drawerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         drawerList.setAdapter(new PublicDrawerAdapter(context));
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -123,6 +121,26 @@ public abstract class BasePublicActivity extends AppCompatActivity {
         };
         mDrawerToggle.setDrawerIndicatorEnabled(true);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+        drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch ((int) id) {
+                    case 0: // Replace it by constants
+                        showNews();
+                        return;
+                    case 1:
+                        showIndices(Constants.MAIN);
+                        return;
+                    case 2:
+                        showFutures();
+                        return;
+                    case 5:
+                        showLogon();
+                        return;
+                }
+            }
+        });
     }
 
     @Override

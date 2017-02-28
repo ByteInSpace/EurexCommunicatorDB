@@ -25,13 +25,13 @@ public class PublicDrawerAdapter  extends BaseAdapter {
 
     public PublicDrawerAdapter(Context context) {
         inflator = LayoutInflater.from(context);
-        menuItems.add(new MenuItem("News"));
-        menuItems.add(new MenuItem("Eurex Indices"));
-        menuItems.add(new MenuItem("Futures"));
-        menuItems.add(new MenuItem("Options"));
-        menuItems.add(new MenuItem("Game"));
-        menuItems.add(new MenuItem("Member Logon"));
-        menuItems.add(new MenuItem("Settings"));
+        menuItems.add(new MenuItem("News", R.drawable.newspaper_big));
+        menuItems.add(new MenuItem("Eurex Indices", R.drawable.chart_big));
+        menuItems.add(new MenuItem("Futures", R.drawable.futures_big));
+        menuItems.add(new MenuItem("Options", R.drawable.options_big));
+        menuItems.add(new MenuItem("Game", R.drawable.game_big));
+        menuItems.add(new MenuItem("Member Logon", R.drawable.member_big));
+        menuItems.add(new MenuItem("Settings", R.drawable.settings_big));
     }
 
     @Override
@@ -66,7 +66,7 @@ public class PublicDrawerAdapter  extends BaseAdapter {
         Context context = parent.getContext();
         MenuItem menuItem = (MenuItem) getItem(position);
         holder.caption.setText(menuItem.getCaption());
-        holder.menuicon.setImageResource(R.drawable.newspaper_big);
+        holder.menuicon.setImageResource(menuItem.getMenuicon());
 
         convertView.setFocusable(false);
 
