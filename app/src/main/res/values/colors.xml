@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="bar_background">#464c59</color>
-    <color name="menu_background">#2f3a47</color>
+    <color name="bar_background">#003772</color>
+    <color name="menu_background">#6687aa</color>
     <color name="menu_text">#000000</color>
 
     <color name="colorPrimary">#464c59</color>
@@ -12,7 +12,7 @@
     <color name="rate_decrease">#FFFFFF</color>
     <color name="textview_background">#a4cef8</color>
     <color name="colorDate">#c6c6c6</color>
-    <color name="colorSubHeadline">#509a00</color>
-    <color name="colorHeadline">#464c59</color>
+    <color name="colorSubHeadline">#81b117</color>
+    <color name="colorHeadline">#2f3a47</color>
     <color name="bar_text">#1e232d</color>
 </resources>
