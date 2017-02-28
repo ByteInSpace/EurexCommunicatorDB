@@ -13,7 +13,7 @@ public class News {
     private String headline;
     private NEWS_TYPE type;
     private String author;
-    private String image;
+    private int image;
     private String url;
 
     public String getHeadline() {
@@ -50,11 +50,11 @@ public class News {
         Date = date;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 

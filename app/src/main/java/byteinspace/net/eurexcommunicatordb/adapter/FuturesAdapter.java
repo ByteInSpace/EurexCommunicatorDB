@@ -73,9 +73,11 @@ public class FuturesAdapter extends BaseAdapter {
         holder.future_price.setText(future.getPrice());
         holder.future_rate.setText(future.getChange() + " %");
         if (Float.valueOf(future.getChange()) >= 0) {
-            holder.future_rate.setTextColor(Color.GREEN);
+            //holder.future_rate.setTextColor(Color.GREEN);
+            holder.future_rate.setBackgroundColor(Color.GREEN);
         } else {
-            holder.future_rate.setTextColor(Color.RED);
+            //holder.future_rate.setTextColor(Color.RED);
+            holder.future_rate.setBackgroundColor(Color.RED);
         }
 
         convertView.setFocusable(false);

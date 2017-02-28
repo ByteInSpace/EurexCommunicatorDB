@@ -21,11 +21,19 @@ public class MainPublicActivity extends BasePublicActivity {
         super.showNews();
     }
 
+    public void ib2Click(View view) { }
+
     public void ib3Click(View view) {
         showFutures();
     }
 
+    public void ib4Click(View view) { }
+
+    public void ib5Click(View view) { }
+
     public void ib6Click(View view) {
         showLogon();
     }
+
+    public void i74Click(View view) { }
 }

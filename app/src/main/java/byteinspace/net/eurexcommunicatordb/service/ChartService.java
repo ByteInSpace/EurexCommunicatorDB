@@ -10,11 +10,11 @@ import byteinspace.net.eurexcommunicatordb.model.Index;
  * Created by daniel on 26.02.2017.
  */
 
-public class FuturesService {
+public class ChartService {
 
     private List<Future> futures = new ArrayList<>();
 
-    public FuturesService() {
+    public ChartService() {
         createFutures();
     }
 

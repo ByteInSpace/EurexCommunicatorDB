@@ -12,10 +12,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
+
         style="@style/EurexCommunicatorMainView"
 
         >
@@ -45,7 +42,7 @@
             android:id="@+id/ib1"
             android:background="@drawable/newspaper_very_big"
             android:onClick="ib1Click"
-            android:contentDescription="BANANE"
+
                 style="@style/EurexCommunicatorMainViewIcons"
             />
             <ImageButton
@@ -53,30 +50,27 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/ib2"
                 android:background="@drawable/chart_very_big"
-                android:onClick="ib2Click()"
+                android:onClick="ib2Click"
                 android:layout_toRightOf="@id/ib1"
-                android:contentDescription="BANANE"
-                style="@style/EurexCommunicatorMainViewIcons"
+                 style="@style/EurexCommunicatorMainViewIcons"
                 />
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/ib3"
                 android:background="@drawable/futures_very_big"
-                android:onClick="ib3Click()"
+                android:onClick="ib3Click"
                 android:layout_below="@id/ib1"
-                android:contentDescription="BANANE"
-                style="@style/EurexCommunicatorMainViewIcons"
+                 style="@style/EurexCommunicatorMainViewIcons"
                 />
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/ib4"
                 android:background="@drawable/options_very_big"
-                android:onClick="ib4Click()"
+                android:onClick="ib4Click"
                 android:layout_toRightOf="@id/ib3"
                 android:layout_below="@id/ib2"
-                android:contentDescription="BANANE"
                 style="@style/EurexCommunicatorMainViewIcons"
                 />
             <ImageButton
@@ -84,10 +78,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/ib5"
                 android:background="@drawable/game_very_big"
-                android:onClick="ib5Click()"
+                android:onClick="ib5Click"
                 android:layout_below="@id/ib3"
-                android:contentDescription="BANANE"
-                style="@style/EurexCommunicatorMainViewIcons"
+                   style="@style/EurexCommunicatorMainViewIcons"
                 />
 
 
@@ -97,9 +90,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/ib6"
                 android:background="@drawable/member_very_big"
-                android:onClick="ib6Click()"
-                android:contentDescription="BANANE"
-                android:layout_below="@+id/ib4"
+                android:onClick="ib6Click"
+                  android:layout_below="@+id/ib4"
                 android:layout_toEndOf="@+id/ib5"
                 style="@style/EurexCommunicatorMainViewIcons"
                 />
@@ -110,9 +102,8 @@
                 android:background="@drawable/settings_very_big"
                 android:layout_below="@id/ib5"
 
-                android:onClick="ib7Click()"
-                android:contentDescription="BANANE"
-                style="@style/EurexCommunicatorMainViewIcons"
+                android:onClick="ib7Click"
+                 style="@style/EurexCommunicatorMainViewIcons"
                 />
         </RelativeLayout>
 

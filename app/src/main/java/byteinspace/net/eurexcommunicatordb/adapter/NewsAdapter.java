@@ -69,7 +69,7 @@ public class NewsAdapter extends BaseAdapter {
         holder.news_date.setText(news.getDate());
         holder.news_type.setText(news.getAuthor() + " | " + news.getType());
         holder.news_headline.setText(news.getHeadline());
-        holder.news_image.setImageResource(R.drawable.news1);
+        holder.news_image.setImageResource(news.getImage());
 
         convertView.setFocusable(false);
 

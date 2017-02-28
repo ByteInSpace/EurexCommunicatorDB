@@ -43,7 +43,10 @@
         <activity
             android:name=".EventActivity"
             android:label="@string/events" />
-        <activity android:name=".FuturesOverviewActivity" />
+        <activity
+            android:name=".FuturesOverviewActivity"
+            android:label="@string/futures"
+            android:theme="@style/EurexCommunicatorTheme" />
         <activity android:name=".EventRegisterActivity" />
         <activity
             android:name=".SurveysActivity"
@@ -58,12 +61,11 @@
             android:label="@string/invoice"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".ReportActivity" />
-        <activity android:name=".MainPublicActivity"
-
+        <activity
+            android:name=".MainPublicActivity"
             android:label="@string/welcome_no_user"
-            android:theme="@style/EurexCommunicatorTheme">
-
-        </activity>
+            android:theme="@style/EurexCommunicatorTheme"></activity>
+        <activity android:name=".FutureDetailActivity"></activity>
     </application>
 
 </manifest>

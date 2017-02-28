@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="6dp"
     android:background="@color/colorBackground"
     android:clickable="false"
     android:focusable="false"
     android:focusableInTouchMode="false"
     android:descendantFocusability="blocksDescendants"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal"
+
     >
     <TableLayout
         android:layout_height="wrap_content"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:clickable="false"
         android:focusable="false"
-
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="7dp">
         >
         <TableRow
             android:clickable="false"
@@ -26,12 +35,12 @@
                 android:layout_marginRight="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorHeadline"
                 android:clickable="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:layout_weight="0"
                 android:textIsSelectable="false"
+                style="@style/EurexCommunicatorHeadline"
                 />
         </TableRow>
         <TableRow
@@ -41,47 +50,51 @@
                 android:layout_marginTop="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorSubHeadline"
                 android:clickable="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textIsSelectable="false"
+                style="@style/EurexCommunicatorSubHeadline"
+
                 />
         </TableRow>
     </TableLayout>
 
             <TextView android:id="@+id/future_price"
                 android:layout_marginTop="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="60dp"
+                android:layout_width="65dp"
                  android:layout_height="wrap_content"
-                android:textColor="@color/colorHeadline"
-                                android:clickable="false"
+                android:clickable="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:textIsSelectable="false"
                 android:textAlignment="center"
-                android:textSize="@dimen/text_size_small"
+                android:layout_centerInParent="true"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="5dp"
+                style="@style/EurexCommunicatorRegularText"
+
                 />
 
     <TextView android:id="@+id/future_rate"
         android:layout_marginTop="4dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="45dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorHeadline"
         android:layout_toRightOf="@id/future_price"
         android:clickable="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:textIsSelectable="false"
         android:textAlignment="center"
-        android:textSize="@dimen/text_size_small"
+        android:layout_centerInParent="true"
+        android:layout_gravity="bottom"
+        style="@style/EurexCommunicatorRate"
+
         />
 
 
 
 </LinearLayout>
 
+</RelativeLayout>
 

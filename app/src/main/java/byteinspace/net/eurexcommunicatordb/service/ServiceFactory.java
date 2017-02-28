@@ -10,7 +10,7 @@ public class ServiceFactory {
     private static AuthenticationService authenticationService;
     private static MailingService mailingService;
     private static EventService eventService;
-    private static FuturesService indexService;
+    private static ChartService indexService;
     private static SurveyService surveyService;
     private static InvoiceService invoiceService;
     private static ReportService reportService;
@@ -23,7 +23,7 @@ public class ServiceFactory {
         authenticationService = new AuthenticationService();
         mailingService = new MailingService();
         eventService = new EventService();
-        indexService = new FuturesService();
+        indexService = new ChartService();
         surveyService = new SurveyService();
         invoiceService = new InvoiceService();
         reportService = new ReportService();
@@ -48,7 +48,7 @@ public class ServiceFactory {
 
     public static EventService getEventService() { return eventService; }
 
-    public static FuturesService getFuturesService() { return indexService; }
+    public static ChartService getFuturesService() { return indexService; }
 
     public static SurveyService getSurveyService() { return surveyService; }
 

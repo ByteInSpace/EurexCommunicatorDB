@@ -44,19 +44,44 @@
     <style name="EurexCommunicatorDrawerStyle">
         <item name="android:background">@color/menu_background</item>
         <item name="android:textColor">@color/menu_text</item>
-        <item name="android:textSize">24dp</item>
         <item name="android:gravity">center_vertical</item>
      </style>
     <style name="EurexCommunicatorMenuTextStyle">
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:gravity">center_vertical</item>
     </style>
     <style name="EurexCommunicatorMainView">
-        <item name="android:background">@color/menu_background</item>
+        <item name="android:background">@color/backgroundMainView</item>
         <item name="android:textColor">@color/menu_text</item>
         <item name="android:textSize">24dp</item>
+        <item name="android:divider">@color/backgroundMainView</item>
 
     </style>
+
+    <style name="EurexCommunicatorHeadline">
+        <item name="android:textColor">@color/colorHeadline</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="EurexCommunicatorSubHeadline">
+        <item name="android:textColor">@color/colorSubHeadline</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="EurexCommunicatorDate">
+        <item name="android:textColor">@color/colorDate</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="EurexCommunicatorRegularText">
+        <item name="android:textColor">@color/colorHeadline</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="EurexCommunicatorRate">
+        <item name="android:textColor">@color/rate</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
     <style name="EurexCommunicatorMainViewIcons">
         <item name="android:layout_margin">24dp</item>
     </style>

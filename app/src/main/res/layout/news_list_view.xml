@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="6dp"
+        android:padding="10dp"
         android:background="@color/colorBackground"
         android:clickable="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:descendantFocusability="blocksDescendants"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+
 
         >
             <ImageView android:id="@+id/news_image"
@@ -30,7 +36,6 @@
             android:clickable="false"
             android:focusable="false"
             android:background="@color/colorBackground"
-
             >
             <TableRow
                 android:clickable="false"
@@ -41,14 +46,12 @@
             android:layout_marginRight="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorDate"
             android:layout_toRightOf="@id/news_image"
             android:clickable="false"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textIsSelectable="false"
-            android:background="@color/colorBackground"
+            style="@style/EurexCommunicatorDate"
             />
 
         <TextView android:id="@+id/news_type"
@@ -56,13 +59,11 @@
             android:layout_width="match_parent"
             android:layout_toRightOf="@id/news_date"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorSubHeadline"
             android:clickable="false"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textIsSelectable="false"
-            android:background="@color/colorBackground"
+            style="@style/EurexCommunicatorSubHeadline"
             />
          </TableRow>
 
@@ -75,17 +76,18 @@
             android:layout_width="wrap_content"
             android:layout_below="@id/news_type"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorHeadline"
             android:layout_span="2"
             android:clickable="false"
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:textIsSelectable="false"
-            android:background="@color/colorBackground"
+            style="@style/EurexCommunicatorHeadline"
             />
 
          </TableRow>
         </TableLayout>
     </LinearLayout>
+
+    </RelativeLayout>
 
 

@@ -3,12 +3,13 @@
     <color name="bar_background">#003772</color>
     <color name="menu_background">#6687aa</color>
     <color name="menu_text">#000000</color>
+    <color name="backgroundMainView">#d0d8e1</color>
 
     <color name="colorPrimary">#464c59</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBackground">#FFFFFF</color>
-    <color name="rate_increase">#FFFFFF</color>
+    <color name="rate">#FFFFFF</color>
     <color name="rate_decrease">#FFFFFF</color>
     <color name="textview_background">#a4cef8</color>
     <color name="colorDate">#c6c6c6</color>
