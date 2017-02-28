@@ -21,7 +21,7 @@ public class StartActivity extends AppCompatActivity {
     }
 
     protected void showNextScreen() {
-        Intent intent = new Intent(this, NewsActivity.class);
+        Intent intent = new Intent(this, MainPublicActivity.class);
         startActivity(intent);
     }
 

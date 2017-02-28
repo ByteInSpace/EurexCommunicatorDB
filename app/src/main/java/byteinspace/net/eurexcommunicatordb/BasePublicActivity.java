@@ -67,7 +67,7 @@ public abstract class BasePublicActivity extends AppCompatActivity {
     protected void showToolbar() {
 
         setSupportActionBar(toolbar);
-
+/*
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
 
 
@@ -98,7 +98,7 @@ public abstract class BasePublicActivity extends AppCompatActivity {
                 }
                 return false;
             }
-        });
+        });*/
     }
 
     protected void setupDrawer() {
@@ -163,7 +163,7 @@ public abstract class BasePublicActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void showNews() {
+    protected void showNews() {
         Intent intent = new Intent(this, NewsActivity.class);
         startActivity(intent);
     }
@@ -182,6 +182,7 @@ public abstract class BasePublicActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
+    /*
     @Override public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_public, menu);
         if (menu instanceof MenuBuilder) {
@@ -189,6 +190,6 @@ public abstract class BasePublicActivity extends AppCompatActivity {
             ((MenuBuilder) menu).setOptionalIconsVisible(true);
         }
         return true;
-    }
+    }*/
 }
 

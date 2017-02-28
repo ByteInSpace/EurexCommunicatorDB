@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        style="@style/EurexCommunicatorMainView"
+
+        >
+
+        <android.support.v7.widget.Toolbar
+            style="@style/EurexCommunicatorToolbarStyle"
+            app:popupTheme="@style/EurexCommunicatorToolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            android:elevation="4dp"
+
+            >
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:gravity="center"
+
+            >
+
+            <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ib1"
+            android:background="@drawable/newspaper_very_big"
+            android:onClick="ib1Click"
+            android:contentDescription="BANANE"
+                style="@style/EurexCommunicatorMainViewIcons"
+            />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ib2"
+                android:background="@drawable/chart_very_big"
+                android:onClick="ib2Click()"
+                android:layout_toRightOf="@id/ib1"
+                android:contentDescription="BANANE"
+                style="@style/EurexCommunicatorMainViewIcons"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ib3"
+                android:background="@drawable/futures_very_big"
+                android:onClick="ib3Click()"
+                android:layout_below="@id/ib1"
+                android:contentDescription="BANANE"
+                style="@style/EurexCommunicatorMainViewIcons"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ib4"
+                android:background="@drawable/options_very_big"
+                android:onClick="ib4Click()"
+                android:layout_toRightOf="@id/ib3"
+                android:layout_below="@id/ib2"
+                android:contentDescription="BANANE"
+                style="@style/EurexCommunicatorMainViewIcons"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ib5"
+                android:background="@drawable/game_very_big"
+                android:onClick="ib5Click()"
+                android:layout_below="@id/ib3"
+                android:contentDescription="BANANE"
+                style="@style/EurexCommunicatorMainViewIcons"
+                />
+
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ib6"
+                android:background="@drawable/member_very_big"
+                android:onClick="ib6Click()"
+                android:contentDescription="BANANE"
+                android:layout_below="@+id/ib4"
+                android:layout_toEndOf="@+id/ib5"
+                style="@style/EurexCommunicatorMainViewIcons"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ib7"
+                android:background="@drawable/settings_very_big"
+                android:layout_below="@id/ib5"
+
+                android:onClick="ib7Click()"
+                android:contentDescription="BANANE"
+                style="@style/EurexCommunicatorMainViewIcons"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        style="@style/EurexCommunicatorDrawerStyle"
+        />
+
+</android.support.v4.widget.DrawerLayout>
