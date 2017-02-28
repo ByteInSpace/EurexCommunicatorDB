@@ -65,7 +65,10 @@
             android:name=".MainPublicActivity"
             android:label="@string/welcome_no_user"
             android:theme="@style/EurexCommunicatorTheme"></activity>
-        <activity android:name=".FutureDetailActivity"></activity>
+        <activity android:name=".FutureDetailActivity"
+            android:label="@string/futures"
+            android:theme="@style/EurexCommunicatorTheme"
+            ></activity>
     </application>
 
 </manifest>

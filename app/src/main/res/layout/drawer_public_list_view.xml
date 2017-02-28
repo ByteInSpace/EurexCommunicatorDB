@@ -28,6 +28,6 @@
         android:layout_centerInParent="true"
 
         android:layout_toRightOf="@id/menuicon"
-        style="@style/EurexCommunicatorMenuTextStyle"
+        style="@style/EurexCommunicatorDrawerStyle"
         />
 </RelativeLayout>

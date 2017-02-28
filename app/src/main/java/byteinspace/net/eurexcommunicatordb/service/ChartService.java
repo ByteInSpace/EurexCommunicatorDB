@@ -51,4 +51,6 @@ public class ChartService {
     public List<Future> getFutures() {
         return this.futures;
     }
+
+    public Future getFutureByIndex(int index) { return this.futures.get(index);}
 }

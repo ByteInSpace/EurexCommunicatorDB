@@ -30,13 +30,20 @@ public class FuturesOverviewActivity  extends BasePublicActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(FuturesOverviewActivity.this, "You Clicked ", Toast.LENGTH_SHORT).show();
+                showFuture(id);
 
             }
         });
 
     }
 
+
+    private void showFuture(long id) {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, FutureDetailActivity.class);
+        intent.putExtra("FUTUREID", id);
+        startActivity(intent);
+}
 
     @Override protected int getContentView() {
         return R.layout.activity_futures_overview;
