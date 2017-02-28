@@ -20,4 +20,12 @@ public class MainPublicActivity extends BasePublicActivity {
     public void ib1Click(View view) {
         super.showNews();
     }
+
+    public void ib3Click(View view) {
+        showFutures();
+    }
+
+    public void ib6Click(View view) {
+        showLogon();
+    }
 }

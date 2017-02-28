@@ -58,7 +58,12 @@
             android:label="@string/invoice"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".ReportActivity" />
-        <activity android:name=".MainPublicActivity"></activity>
+        <activity android:name=".MainPublicActivity"
+
+            android:label="@string/welcome_no_user"
+            android:theme="@style/EurexCommunicatorTheme">
+
+        </activity>
     </application>
 
 </manifest>

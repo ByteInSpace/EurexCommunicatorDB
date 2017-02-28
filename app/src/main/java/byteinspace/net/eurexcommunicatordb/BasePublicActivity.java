@@ -119,6 +119,7 @@ public abstract class BasePublicActivity extends AppCompatActivity {
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
+
         mDrawerToggle.setDrawerIndicatorEnabled(true);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
@@ -167,18 +168,18 @@ public abstract class BasePublicActivity extends AppCompatActivity {
         Intent intent = new Intent(this, NewsActivity.class);
         startActivity(intent);
     }
-    private void showIndices(String target) {
+    protected void showIndices(String target) {
         Intent intent = new Intent(this, IndexTickerActivity.class);
         intent.putExtra(Constants.KEY, target);
         startActivity(intent);
     }
 
-    private void showFutures() {
+    protected void showFutures() {
         Intent intent = new Intent(this, FuturesOverviewActivity.class);
         startActivity(intent);
     }
 
-    private void showLogon() {
+    protected void showLogon() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
