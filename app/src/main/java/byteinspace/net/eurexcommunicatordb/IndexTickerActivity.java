@@ -25,13 +25,11 @@ public class IndexTickerActivity extends BasePublicActivity implements AdapterVi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_index_ticker);
 
         eurexIndexAdapter = new EurexIndexAdapter(this);
         optionsAdapter = new OptionsAdapter(this);
 
         Intent intent = getIntent();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         lv = (ListView) findViewById(R.id.lv);
 
         showAdapter(intent.getStringExtra(Constants.KEY));
@@ -46,7 +44,6 @@ public class IndexTickerActivity extends BasePublicActivity implements AdapterVi
             }
         });
 
-        showToolbar(toolbar);
 
 
     }
@@ -76,6 +73,9 @@ public class IndexTickerActivity extends BasePublicActivity implements AdapterVi
         System.out.println("Entry: " + index.getName());
     }
 
+    @Override protected int getContentView() {
+        return R.layout.activity_index_ticker;
+    }
 
 
 

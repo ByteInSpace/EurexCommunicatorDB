@@ -24,7 +24,7 @@
         app:popupTheme="@style/EurexCommunicatorToolbarStyle"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/news_toolbar"
+        android:id="@+id/toolbar"
         android:elevation="4dp"
 
         >
@@ -33,7 +33,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/news_toolbar"
+        android:layout_below="@+id/toolbar"
         android:id="@+id/newslist"
         android:background="@color/colorBackground"
 

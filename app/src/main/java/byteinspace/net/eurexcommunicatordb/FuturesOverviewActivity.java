@@ -22,8 +22,6 @@ public class FuturesOverviewActivity  extends BasePublicActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_futures_overview);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.futuresover_toolbar);
         lv = (ListView) findViewById(R.id.futureslist);
         adapter = new FuturesAdapter(this);
         lv.setAdapter(adapter);
@@ -36,9 +34,13 @@ public class FuturesOverviewActivity  extends BasePublicActivity {
 
             }
         });
-        showToolbar(toolbar);
+
     }
 
+
+    @Override protected int getContentView() {
+        return R.layout.activity_futures_overview;
+    }
 }
 
 

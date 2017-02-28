@@ -3,7 +3,9 @@ package byteinspace.net.eurexcommunicatordb;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,8 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import byteinspace.net.eurexcommunicatordb.adapter.NewsAdapter;
+import byteinspace.net.eurexcommunicatordb.model.News;
 
 /**
  * Created by conta on 22.02.2017.
@@ -29,6 +35,24 @@ public abstract class BasePublicActivity extends AppCompatActivity {
     protected DrawerLayout mDrawerLayout;
     protected String mActivityTitle;
 
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(getContentView());
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        showToolbar();
+        drawerList = (ListView)findViewById(R.id.navList);
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mActivityTitle = getTitle().toString();
+
+        createDrawer();
+
+    }
+
+    protected abstract int getContentView() ;
+
     protected void createDrawer() {
         String[] osArray = { "Android", "iOS", "Windows", "OS X", "Linux" };
         drawerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
@@ -40,9 +64,7 @@ public abstract class BasePublicActivity extends AppCompatActivity {
 
     }
 
-    protected void showToolbar(Toolbar toolbar) {
-
-        this.toolbar = toolbar;
+    protected void showToolbar() {
 
         setSupportActionBar(toolbar);
 

@@ -27,8 +27,6 @@ public class NewsActivity extends BasePublicActivity implements AdapterView.OnIt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.news_toolbar);
         lv = (ListView) findViewById(R.id.newslist);
         adapter = new NewsAdapter(this);
         lv.setAdapter(adapter);
@@ -44,10 +42,7 @@ public class NewsActivity extends BasePublicActivity implements AdapterView.OnIt
                 startActivity(i);
             }
         });
-        showToolbar(toolbar);
-        drawerList = (ListView)findViewById(R.id.navList);
-        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-        mActivityTitle = getTitle().toString();
+
         createDrawer();
 
     }
@@ -56,5 +51,9 @@ public class NewsActivity extends BasePublicActivity implements AdapterView.OnIt
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(NewsActivity.this, "You Clicked ", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override protected int getContentView() {
+        return R.layout.activity_news;
     }
 }
