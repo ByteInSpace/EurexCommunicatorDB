@@ -25,6 +25,10 @@ public class InvoicesActivity extends BasePrivateActivity {
         lv = (ListView) findViewById(R.id.list_invoice);
         lv.setAdapter(adapter);
 
-        showToolbar(toolbar);
+
+    }
+
+    @Override protected int getContentView() {
+        return R.layout.activity_invoices;
     }
 }

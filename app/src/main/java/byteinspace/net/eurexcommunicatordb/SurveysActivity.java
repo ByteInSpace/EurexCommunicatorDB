@@ -20,11 +20,9 @@ public class SurveysActivity  extends BasePrivateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_surveys);
 
         adapter = new SurveyAdapter(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_surveys);
 
         lv = (ListView) findViewById(R.id.list_surveys);
         lv.setAdapter(adapter);
@@ -36,7 +34,6 @@ public class SurveysActivity  extends BasePrivateActivity {
         });
 
 
-        showToolbar(toolbar);
     }
 
     private void showSurveyRegistration(long id) {
@@ -49,6 +46,11 @@ public class SurveysActivity  extends BasePrivateActivity {
 
 
 
+    }
+
+
+    @Override protected int getContentView() {
+        return R.layout.activity_surveys;
     }
 
 }

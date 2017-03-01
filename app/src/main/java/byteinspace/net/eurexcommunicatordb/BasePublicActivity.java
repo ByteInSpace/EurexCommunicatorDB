@@ -108,7 +108,7 @@ public abstract class BasePublicActivity extends AppCompatActivity {
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("Navigation!");
+                getSupportActionBar().setTitle("mActivityTitle!");
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 

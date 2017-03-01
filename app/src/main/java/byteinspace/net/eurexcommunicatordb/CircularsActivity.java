@@ -38,21 +38,15 @@ public class CircularsActivity extends BasePrivateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_circulars);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_circulars);
-        showToolbar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
-
-
-
-
     }
 
-
+    @Override protected int getContentView() {
+        return R.layout.activity_circulars;
+    }
     /**
      * A placeholder fragment containing a simple view.
      */

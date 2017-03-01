@@ -20,11 +20,9 @@ public class MailingActivity extends BasePrivateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mailing);
 
         adapter = new MailingsAdapter(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_mailings);
 
         lv = (ListView) findViewById(R.id.list_mailings);
         lv.setAdapter(adapter);
@@ -39,6 +37,10 @@ public class MailingActivity extends BasePrivateActivity {
         });
 
 
-        showToolbar(toolbar);
+
+    }
+
+    @Override protected int getContentView() {
+        return R.layout.activity_mailing;
     }
 }

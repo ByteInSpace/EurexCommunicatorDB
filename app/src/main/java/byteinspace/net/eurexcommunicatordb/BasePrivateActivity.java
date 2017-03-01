@@ -1,13 +1,21 @@
 package byteinspace.net.eurexcommunicatordb;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
+import byteinspace.net.eurexcommunicatordb.adapter.PrivateDrawerAdapter;
+import byteinspace.net.eurexcommunicatordb.adapter.PublicDrawerAdapter;
 import byteinspace.net.eurexcommunicatordb.model.User;
 import byteinspace.net.eurexcommunicatordb.service.AuthenticationService;
 import byteinspace.net.eurexcommunicatordb.service.ServiceFactory;
@@ -16,16 +24,49 @@ import byteinspace.net.eurexcommunicatordb.service.ServiceFactory;
  * Created by conta on 24.02.2017.
  */
 
-public class BasePrivateActivity extends AppCompatActivity {
+public abstract class BasePrivateActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
     protected User user;
 
+    private Toolbar toolbar;
+    protected ListView drawerList;
 
-    protected void showToolbar(Toolbar toolbar) {
+    private ActionBarDrawerToggle mDrawerToggle;
+    protected DrawerLayout mDrawerLayout;
+    protected String mActivityTitle;
 
-        this.toolbar = toolbar;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(getContentView());
+        setUpUser();
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        showToolbar();
+        drawerList = (ListView)findViewById(R.id.navList);
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mActivityTitle = getTitle().toString();
+
+        createDrawer(this);
+
+    }
+
+    protected abstract int getContentView() ;
+
+    protected void createDrawer(Context context) {
+        drawerList.setAdapter(new PrivateDrawerAdapter(context, user));
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        setupDrawer();
+
+    }
+    protected void showToolbar() {
+
+        setSupportActionBar(toolbar);
+        //this.toolbar = toolbar;
+/*
         setSupportActionBar(toolbar);
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
 
@@ -55,10 +96,51 @@ public class BasePrivateActivity extends AppCompatActivity {
                 }
                 return false;
             }
-        });
+        });*/
     }
 
+    protected void setupDrawer() {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
+                R.string.drawer_open, R.string.drawer_close) {
 
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle("mActivityTitle!");
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                getSupportActionBar().setTitle(mActivityTitle);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+        drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch ((int) id) {
+                    case 0: // Replace it by constants
+                        //showNews();
+                        return;
+                    case 1:
+                        //showIndices(Constants.MAIN);
+                        return;
+                    case 2:
+                        //showFutures();
+                        return;
+                    case 5:
+                        //showLogon();
+                        return;
+                }
+            }
+        });
+    }
     private void showCirculars() {
         Intent intentReceived = getIntent();
         Intent intent = new Intent(this, CircularsActivity.class);
@@ -124,6 +206,27 @@ public class BasePrivateActivity extends AppCompatActivity {
         user = ServiceFactory.getFactory().getAuthenticationService().getUser(intent.getStringExtra("USERID"));
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        // Activate the navigation drawer toggle
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    /*
     @Override public boolean onCreateOptionsMenu(Menu menu){
         setUpUser();
         getMenuInflater().inflate(R.menu.menu_private, menu);
@@ -162,5 +265,6 @@ public class BasePrivateActivity extends AppCompatActivity {
         }
         return true;
     }
+    */
 }
 

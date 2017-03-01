@@ -14,15 +14,16 @@ public class ReportActivity extends BasePrivateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report);
 
         adapter = new ReportAdapter(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_report);
 
         lv = (ListView) findViewById(R.id.list_report);
         lv.setAdapter(adapter);
 
-        showToolbar(toolbar);
+    }
+
+    @Override protected int getContentView() {
+        return R.layout.activity_report;
     }
 }

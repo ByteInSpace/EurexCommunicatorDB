@@ -16,11 +16,9 @@ public class EventRegisterActivity extends BasePrivateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eventregister);
 
         Intent intent = getIntent();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_event_register);
 
         int eventid = intent.getIntExtra("EVENTID", 0);
         String userid = intent.getStringExtra("USERID");
@@ -45,6 +43,9 @@ public class EventRegisterActivity extends BasePrivateActivity {
 
         final TextView nachname = (TextView) findViewById(R.id.evr_nachname);
         nachname.setText(eventuser.getFamilienname());
-        showToolbar(toolbar);
+    }
+
+    @Override protected int getContentView() {
+        return R.layout.activity_eventregister;
     }
 }

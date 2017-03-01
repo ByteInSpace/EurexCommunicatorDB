@@ -18,11 +18,9 @@ public class SurveyDetailActivity extends BasePrivateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.survey_detail);
 
         Intent intent = getIntent();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_srv_detail);
 
         int surveyid = intent.getIntExtra("ID", 0);
         String userid = intent.getStringExtra("USERID");
@@ -32,6 +30,9 @@ public class SurveyDetailActivity extends BasePrivateActivity {
         final TextView surveyName = (TextView) findViewById(R.id.srv_detail_name);
         surveyName.setText(survey.getTitle());
 
-        showToolbar(toolbar);
+    }
+
+    @Override protected int getContentView() {
+        return R.layout.survey_detail;
     }
 }

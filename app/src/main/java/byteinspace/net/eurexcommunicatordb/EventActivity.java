@@ -23,11 +23,9 @@ public class EventActivity extends BasePrivateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event);
 
         adapter = new EventAdapter(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_event);
 
         lv = (ListView) findViewById(R.id.list_event);
         lv.setAdapter(adapter);
@@ -39,7 +37,10 @@ public class EventActivity extends BasePrivateActivity {
         });
 
 
-        showToolbar(toolbar);
+    }
+
+    @Override protected int getContentView() {
+        return R.layout.activity_event;
     }
 
     private void showEventRegistration(long id) {

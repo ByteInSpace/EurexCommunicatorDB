@@ -14,9 +14,6 @@ public class HelloPrivateUserAcivity extends BasePrivateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hello_private_user_acivity);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.welcome_toolbar);
-        showToolbar(toolbar);
 
     }
 
@@ -25,5 +22,9 @@ public class HelloPrivateUserAcivity extends BasePrivateActivity {
         TextView textview = (TextView) findViewById(R.id.welcome_user);
         textview.setText("Welcome " + user.getName());
         return true;
+    }
+
+    @Override protected int getContentView() {
+        return R.layout.activity_hello_private_user_acivity;
     }
 }
