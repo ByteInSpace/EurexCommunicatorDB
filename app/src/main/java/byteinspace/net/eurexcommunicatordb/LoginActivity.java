@@ -14,7 +14,7 @@ import byteinspace.net.eurexcommunicatordb.service.ServiceFactory;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BasePublicActivity {
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -26,7 +26,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
 
         Button signup = (Button) findViewById(R.id.email_sign_in_button);
         signup.setOnClickListener(new View.OnClickListener() {
@@ -55,5 +54,8 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    @Override protected int getContentView() {
+        return R.layout.activity_login;
+    }
 }
 

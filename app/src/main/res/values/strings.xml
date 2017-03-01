@@ -63,4 +63,7 @@
     <string name="drawer_close">Close navigation drawer</string>
     <string name="menunews">News</string>
     <string name="welcome_no_user">Welcome!</string>
+    <string name="action_sign_in_eurex">Sign in Eurex</string>
+    <string name="action_sign_in_eurex_clearing">Sign in Eurex Clearing</string>
+    <string name="action_sign_in_xetra">Sign in Xetra</string>
 </resources>
