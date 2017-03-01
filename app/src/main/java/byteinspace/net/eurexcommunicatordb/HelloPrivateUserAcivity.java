@@ -20,7 +20,7 @@ public class HelloPrivateUserAcivity extends BasePrivateActivity {
     @Override public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         TextView textview = (TextView) findViewById(R.id.welcome_user);
-        textview.setText("Welcome " + user.getName());
+        textview.setText("Welcome " + user.getName() + " to the Client Portal of Deutsche Börse Group");
         return true;
     }
 
