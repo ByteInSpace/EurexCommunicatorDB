@@ -30,7 +30,10 @@ public class PrivateDrawerAdapter extends BaseAdapter {
         menuItems.add(new MenuItem("Notifications", R.drawable.notification_middle));
 
         if (user.isRightSet(AuthenticationService.RIGHT_MAILING))
-            menuItems.add(new MenuItem("Mailing", R.drawable.mailing_middle));
+            menuItems.add(new MenuItem("Mailings", R.drawable.mailing_middle));
+
+        if (user.isRightSet(AuthenticationService.RIGHT_INVOICE))
+            menuItems.add(new MenuItem("Invoices", R.drawable.invoice_middle));
 
         menuItems.add(new MenuItem("TradeMaster", R.drawable.game_big));
         menuItems.add(new MenuItem("Settings", R.drawable.settings_big));

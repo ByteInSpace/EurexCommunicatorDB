@@ -16,6 +16,7 @@ import android.widget.ListView;
 
 import byteinspace.net.eurexcommunicatordb.adapter.PrivateDrawerAdapter;
 import byteinspace.net.eurexcommunicatordb.adapter.PublicDrawerAdapter;
+import byteinspace.net.eurexcommunicatordb.model.Mailing;
 import byteinspace.net.eurexcommunicatordb.model.User;
 import byteinspace.net.eurexcommunicatordb.service.AuthenticationService;
 import byteinspace.net.eurexcommunicatordb.service.ServiceFactory;
@@ -129,7 +130,7 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                         showNotification();
                         return;
                     case 1:
-                        //showIndices(Constants.MAIN);
+                        showMailing();
                         return;
                     case 2:
                         //showFutures();
@@ -149,9 +150,9 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void showCirculars() {
+    private void showMailing() {
         Intent intentReceived = getIntent();
-        Intent intent = new Intent(this, CircularsActivity.class);
+        Intent intent = new Intent(this, MailingActivity.class);
         intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
         startActivity(intent);
     }

@@ -59,6 +59,10 @@ public class MailingsAdapter  extends BaseAdapter {
             holder.mailing_text = (TextView) convertView.findViewById(R.id.mailing_text);
             holder.mailing_headline = (TextView) convertView.findViewById(R.id.mailing_headline);
             holder.mailing_favorite = (ImageView) convertView.findViewById(R.id.mailing_favorite);
+            holder.mailing_image = (ImageView) convertView.findViewById(R.id.mailing_image);
+            holder.tag1 = (TextView) convertView.findViewById(R.id.tag1);
+            holder.tag2 = (TextView) convertView.findViewById(R.id.tag2);
+            holder.tag3 = (TextView) convertView.findViewById(R.id.tag3);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -72,7 +76,15 @@ public class MailingsAdapter  extends BaseAdapter {
             holder.mailing_headline.setTypeface(null, Typeface.BOLD);
         }
         holder.mailing_text.setText(mailing.getText());
-        holder.mailing_favorite.setImageResource(R.drawable.favorite);
+        if (mailing.isFav()) {
+            holder.mailing_favorite.setImageResource(R.drawable.fav);
+        } else {
+            holder.mailing_favorite.setImageResource(R.drawable.no_fav);
+        }
+        holder.tag1.setText(mailing.getTag1());
+        holder.tag2.setText(mailing.getTag2());
+        holder.tag3.setText(mailing.getTag3());
+        holder.mailing_image.setImageResource(mailing.getImage());
 
         convertView.setFocusable(false);
 
@@ -82,8 +94,8 @@ public class MailingsAdapter  extends BaseAdapter {
     }
 
     static class ViewHolder {
-        TextView mailing_headline, mailing_date, mailing_text;
-        ImageView mailing_favorite;
+        TextView mailing_headline, mailing_date, mailing_text, tag1, tag2, tag3;
+        ImageView mailing_favorite, mailing_image;
 
 
     }
