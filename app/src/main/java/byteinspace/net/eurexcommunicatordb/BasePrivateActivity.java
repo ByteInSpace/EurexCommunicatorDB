@@ -126,7 +126,7 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch ((int) id) {
                     case 0: // Replace it by constants
-                        //showNews();
+                        showNotification();
                         return;
                     case 1:
                         //showIndices(Constants.MAIN);
@@ -141,6 +141,14 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void showNotification() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, NotificationActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
+    }
+
     private void showCirculars() {
         Intent intentReceived = getIntent();
         Intent intent = new Intent(this, CircularsActivity.class);
