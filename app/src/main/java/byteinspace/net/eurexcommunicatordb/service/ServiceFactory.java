@@ -15,6 +15,7 @@ public class ServiceFactory {
     private static InvoiceService invoiceService;
     private static ReportService reportService;
     private static NotificationService notificationService;
+    private static TradingOverviewService tradingOverviewService;
 
     private static ServiceFactory factory;
 
@@ -29,6 +30,7 @@ public class ServiceFactory {
         invoiceService = new InvoiceService();
         reportService = new ReportService();
         notificationService = new NotificationService();
+        tradingOverviewService = new TradingOverviewService();
     }
 
     public static ServiceFactory getFactory() {
@@ -59,4 +61,6 @@ public class ServiceFactory {
     public static ReportService getReportService() { return reportService; }
 
     public static NotificationService getNotificationService() { return notificationService; }
+
+    public static TradingOverviewService getTradingOverviewService() { return tradingOverviewService; }
 }

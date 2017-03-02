@@ -1,0 +1,106 @@
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@color/colorBackground"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView android:id="@+id/orderid"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                style="@style/EurexCommunicatorRegularText"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                />
+
+            <TextView android:id="@+id/orderqty"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                style="@style/EurexCommunicatorRegularTextSmall"
+                android:layout_toRightOf="@id/orderid"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                />
+
+            <TextView android:id="@+id/orderprice"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                style="@style/EurexCommunicatorRegularTextSmall"
+                android:layout_toRightOf="@id/orderqty"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                />
+
+            <TextView android:id="@+id/leaveqty"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                style="@style/EurexCommunicatorRegularTextSmall"
+                android:layout_toRightOf="@id/orderprice"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                />
+
+            <TextView android:id="@+id/lastexecutedqty"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                style="@style/EurexCommunicatorRegularTextSmall"
+                android:layout_toRightOf="@id/leaveqty"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                />
+
+            <TextView android:id="@+id/lastexecutedprice"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                style="@style/EurexCommunicatorRegularTextSmall"
+                android:layout_toRightOf="@id/lastexecutedqty"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

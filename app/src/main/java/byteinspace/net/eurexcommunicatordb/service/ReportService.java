@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import byteinspace.net.eurexcommunicatordb.adapter.Report;
+import byteinspace.net.eurexcommunicatordb.model.Report;
 
 /**
  * Created by daniel on 27.02.2017.

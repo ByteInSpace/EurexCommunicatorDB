@@ -139,12 +139,22 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                     case 2:
                         showInvoices();
                         return;
+                    case 3:
+                        showOrderBook();
+                        return;
                     case 5:
                         //showLogon();
                         return;
                 }
             }
         });
+    }
+
+    private void showOrderBook() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, TradingOverviewActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
     }
 
     private void showNotification() {

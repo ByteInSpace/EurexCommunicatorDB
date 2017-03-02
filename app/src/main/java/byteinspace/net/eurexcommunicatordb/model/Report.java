@@ -1,4 +1,4 @@
-package byteinspace.net.eurexcommunicatordb.adapter;
+package byteinspace.net.eurexcommunicatordb.model;
 
 /**
  * Created by daniel on 27.02.2017.
