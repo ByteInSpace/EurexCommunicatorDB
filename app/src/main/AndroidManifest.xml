@@ -70,7 +70,8 @@
             android:label="@string/futures"
             android:theme="@style/EurexCommunicatorTheme" />
         <activity android:name=".NotificationActivity" />
-        <activity android:name=".TradingOverviewActivity"></activity>
+        <activity android:name=".TradingOverviewActivity" />
+        <activity android:name=".OrderDetailActivity"></activity>
     </application>
 
 </manifest>
