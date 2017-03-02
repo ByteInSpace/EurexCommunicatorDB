@@ -71,7 +71,9 @@
             android:theme="@style/EurexCommunicatorTheme" />
         <activity android:name=".NotificationActivity" />
         <activity android:name=".TradingOverviewActivity" />
-        <activity android:name=".OrderDetailActivity"></activity>
+        <activity android:name=".OrderDetailActivity" />
+        <activity android:name=".EmergencyActionActivity" />
+        <activity android:name=".PressActivity"></activity>
     </application>
 
 </manifest>

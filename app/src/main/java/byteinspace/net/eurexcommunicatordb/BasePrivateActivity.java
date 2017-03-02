@@ -142,12 +142,22 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                     case 3:
                         showOrderBook();
                         return;
+                    case 4:
+                        showEmergency();
+                        return;
                     case 5:
                         //showLogon();
                         return;
                 }
             }
         });
+    }
+
+    private void showEmergency() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, EmergencyActionActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
     }
 
     private void showOrderBook() {

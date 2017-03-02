@@ -131,12 +131,15 @@ public abstract class BasePublicActivity extends AppCompatActivity {
                         showNews();
                         return;
                     case 1:
-                        showIndices(Constants.MAIN);
+                        showPress();
                         return;
                     case 2:
+                        showIndices(Constants.MAIN);
+                        return;
+                    case 3:
                         showFutures();
                         return;
-                    case 5:
+                    case 6:
                         showLogon();
                         return;
                 }
@@ -162,6 +165,11 @@ public abstract class BasePublicActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void showPress() {
+        Intent intent = new Intent(this, PressActivity.class);
+        startActivity(intent);
     }
 
     protected void showNews() {

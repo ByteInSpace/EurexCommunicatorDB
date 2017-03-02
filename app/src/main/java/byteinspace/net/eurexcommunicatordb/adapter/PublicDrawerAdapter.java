@@ -26,6 +26,7 @@ public class PublicDrawerAdapter  extends BaseAdapter {
     public PublicDrawerAdapter(Context context) {
         inflator = LayoutInflater.from(context);
         menuItems.add(new MenuItem("News", R.drawable.newspaper_big));
+        menuItems.add(new MenuItem("Press Releases", R.drawable.press_big));
         menuItems.add(new MenuItem("Eurex Indices", R.drawable.chart_big));
         menuItems.add(new MenuItem("Futures", R.drawable.futures_big));
         menuItems.add(new MenuItem("Options", R.drawable.options_big));

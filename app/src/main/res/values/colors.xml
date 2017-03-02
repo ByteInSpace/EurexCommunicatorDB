@@ -8,6 +8,7 @@
     <color name="buttonBackgroundColor">#003772</color>
     <color name="tagBackground">#d0d8e1</color>
     <color name="tagColorText">#2f3a47</color>
+    <color name="colorRed">#e06167</color>
 
 
     <color name="colorPrimary">#464c59</color>

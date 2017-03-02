@@ -48,10 +48,23 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/ib8"
+                android:background="@drawable/press_very_big"
+                android:layout_toRightOf="@id/ib1"
+                android:onClick="ib8Click"
+
+                style="@style/EurexCommunicatorMainViewIcons"
+                />
+
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/ib2"
                 android:background="@drawable/chart_very_big"
                 android:onClick="ib2Click"
-                android:layout_toRightOf="@id/ib1"
+                android:layout_below="@id/ib1"
                  style="@style/EurexCommunicatorMainViewIcons"
                 />
             <ImageButton
@@ -60,16 +73,19 @@
                 android:id="@+id/ib3"
                 android:background="@drawable/futures_very_big"
                 android:onClick="ib3Click"
-                android:layout_below="@id/ib1"
+                android:layout_toRightOf="@id/ib2"
+                android:layout_below="@id/ib8"
                  style="@style/EurexCommunicatorMainViewIcons"
                 />
+
+
+
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/ib4"
                 android:background="@drawable/options_very_big"
                 android:onClick="ib4Click"
-                android:layout_toRightOf="@id/ib3"
                 android:layout_below="@id/ib2"
                 style="@style/EurexCommunicatorMainViewIcons"
                 />
@@ -80,6 +96,7 @@
                 android:background="@drawable/game_very_big"
                 android:onClick="ib5Click"
                 android:layout_below="@id/ib3"
+                android:layout_toRightOf="@id/ib4"
                    style="@style/EurexCommunicatorMainViewIcons"
                 />
 
@@ -92,7 +109,7 @@
                 android:background="@drawable/member_very_big"
                 android:onClick="ib6Click"
                   android:layout_below="@+id/ib4"
-                android:layout_toEndOf="@+id/ib5"
+
                 style="@style/EurexCommunicatorMainViewIcons"
                 />
             <ImageButton
@@ -101,10 +118,12 @@
                 android:id="@+id/ib7"
                 android:background="@drawable/settings_very_big"
                 android:layout_below="@id/ib5"
+                android:layout_toRightOf="@id/ib6"
 
                 android:onClick="ib7Click"
                  style="@style/EurexCommunicatorMainViewIcons"
                 />
+
         </RelativeLayout>
 
     </RelativeLayout>

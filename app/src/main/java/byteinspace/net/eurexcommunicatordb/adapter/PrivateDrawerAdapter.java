@@ -26,7 +26,7 @@ public class PrivateDrawerAdapter extends BaseAdapter {
 
     public static Map<Integer, MENU_ITEMS> menuItemsLinks = new HashMap<Integer, MENU_ITEMS>();
 
-    public static enum MENU_ITEMS {MAILING, INVOICE, NOTIFICATION, RIGHT_TRADING, TRADEMASER, SETTINGS}
+    public static enum MENU_ITEMS {MAILING, INVOICE, NOTIFICATION, RIGHT_TRADING, TRADEMASER, SETTINGS, EMERGENCY}
 
 
     List<MenuItem> menuItems = new ArrayList<MenuItem>();
@@ -55,6 +55,10 @@ public class PrivateDrawerAdapter extends BaseAdapter {
             i++;
             menuItemsLinks.put(i, MENU_ITEMS.RIGHT_TRADING);
         }
+
+        i++;
+        menuItemsLinks.put(i, MENU_ITEMS.EMERGENCY);
+        menuItems.add(new MenuItem("Emergency Action", R.drawable.emergency_middle));
 
         i++;
         menuItemsLinks.put(i, MENU_ITEMS.TRADEMASER);

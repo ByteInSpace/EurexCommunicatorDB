@@ -35,5 +35,9 @@ public class MainPublicActivity extends BasePublicActivity {
         showLogon();
     }
 
-    public void i74Click(View view) { }
+    public void ib7Click(View view) { }
+
+    public void ib8Click(View view) {
+        showPress();
+    }
 }
