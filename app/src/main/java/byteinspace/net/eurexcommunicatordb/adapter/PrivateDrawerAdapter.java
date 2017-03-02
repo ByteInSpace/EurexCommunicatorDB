@@ -9,7 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import byteinspace.net.eurexcommunicatordb.R;
 import byteinspace.net.eurexcommunicatordb.model.MenuItem;
@@ -22,20 +24,37 @@ import byteinspace.net.eurexcommunicatordb.service.AuthenticationService;
 
 public class PrivateDrawerAdapter extends BaseAdapter {
 
+    public static Map<Integer, MENU_ITEMS> menuItemsLinks = new HashMap<Integer, MENU_ITEMS>();
+
+    public static enum MENU_ITEMS {MAILING, INVOICE, NOTIFICATION, TRADEMASER, SETTINGS}
+
+
     List<MenuItem> menuItems = new ArrayList<MenuItem>();
     private final LayoutInflater inflator;
 
     public PrivateDrawerAdapter(Context context, User user) {
         inflator = LayoutInflater.from(context);
         menuItems.add(new MenuItem("Notifications", R.drawable.notification_middle));
+        menuItemsLinks.put(0, MENU_ITEMS.NOTIFICATION);
+        int i = 0;
 
-        if (user.isRightSet(AuthenticationService.RIGHT_MAILING))
+        if (user.isRightSet(AuthenticationService.RIGHT_MAILING)) {
             menuItems.add(new MenuItem("Mailings", R.drawable.mailing_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.MAILING);
+        }
 
-        if (user.isRightSet(AuthenticationService.RIGHT_INVOICE))
+        if (user.isRightSet(AuthenticationService.RIGHT_INVOICE)) {
             menuItems.add(new MenuItem("Invoices", R.drawable.invoice_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.INVOICE);
+        }
 
+        i++;
+        menuItemsLinks.put(i, MENU_ITEMS.TRADEMASER);
         menuItems.add(new MenuItem("TradeMaster", R.drawable.game_big));
+        i++;
+        menuItemsLinks.put(i, MENU_ITEMS.SETTINGS);
         menuItems.add(new MenuItem("Settings", R.drawable.settings_big));
     }
 

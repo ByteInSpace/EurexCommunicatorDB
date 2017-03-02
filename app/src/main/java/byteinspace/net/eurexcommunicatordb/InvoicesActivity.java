@@ -16,13 +16,10 @@ public class InvoicesActivity extends BasePrivateActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_invoices);
 
         adapter = new InvoiceAdapter(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_invoice);
-
-        lv = (ListView) findViewById(R.id.list_invoice);
+       lv = (ListView) findViewById(R.id.list_invoice);
         lv.setAdapter(adapter);
 
 

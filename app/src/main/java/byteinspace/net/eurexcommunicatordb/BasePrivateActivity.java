@@ -21,6 +21,8 @@ import byteinspace.net.eurexcommunicatordb.model.User;
 import byteinspace.net.eurexcommunicatordb.service.AuthenticationService;
 import byteinspace.net.eurexcommunicatordb.service.ServiceFactory;
 
+import static byteinspace.net.eurexcommunicatordb.adapter.PrivateDrawerAdapter.menuItemsLinks;
+
 /**
  * Created by conta on 24.02.2017.
  */
@@ -125,6 +127,8 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
         drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
                 switch ((int) id) {
                     case 0: // Replace it by constants
                         showNotification();
@@ -133,7 +137,7 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                         showMailing();
                         return;
                     case 2:
-                        //showFutures();
+                        showInvoices();
                         return;
                     case 5:
                         //showLogon();

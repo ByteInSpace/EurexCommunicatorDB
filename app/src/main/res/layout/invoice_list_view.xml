@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="3dp"
+    android:padding="10dp"
     android:background="@color/colorBackground"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
     android:descendantFocusability="blocksDescendants"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+
     >
 
+    <TextView android:id="@+id/inv_date"
+        android:layout_marginTop="4dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_width="80dp"
+        android:focusableInTouchMode="false"
+        style="@style/EurexCommunicatorDate"
 
+        />
     <TableLayout
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -19,24 +38,44 @@
         >
 
         <TableRow>
-            <TextView android:id="@+id/inv_date"
-                android:layout_marginTop="4dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorDate"
-                android:clickable="false"
-                android:focusable="false"
-                android:layout_width="80dp"
-                android:focusableInTouchMode="false"
-                android:textSize="@dimen/text_size_small"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                />
-            <TextView android:id="@+id/inv_title"
+
+        <TextView android:id="@+id/inv_title"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/inv_date"
+            style="@style/EurexCommunicatorHeadline"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:maxLines="1"
+            android:layout_weight="1"
+            />
+    </TableRow>
+        <TableRow>
+
+            <TextView android:id="@+id/inv_amount"
                 android:layout_marginTop="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/inv_date"
-                android:textColor="@color/colorHeadline"
+                style="@style/EurexCommunicatorRegularText"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                android:layout_weight="1"
+                />
+        </TableRow>
+        <TableRow>
+
+            <TextView android:id="@+id/inv_due_to"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                style="@style/EurexCommunicatorDate"
                 android:clickable="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
@@ -57,3 +96,5 @@
         android:focusableInTouchMode="false"
         />
 </LinearLayout>
+
+</RelativeLayout>

@@ -57,6 +57,8 @@ public class InvoiceAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.inv_date = (TextView) convertView.findViewById(R.id.inv_date);
             holder.inv_title = (TextView) convertView.findViewById(R.id.inv_title);
+            holder.inv_amount = (TextView) convertView.findViewById(R.id.inv_amount);
+            holder.inv_due_to = (TextView) convertView.findViewById(R.id.inv_due_to);
             holder.inv_paid = (ImageView) convertView.findViewById(R.id.inv_paid);
             convertView.setTag(holder);
         } else {
@@ -67,11 +69,13 @@ public class InvoiceAdapter extends BaseAdapter {
         Invoice invoice = (Invoice) getItem(position);
         holder.inv_date.setText(invoice.getDatum());
         holder.inv_title.setText(invoice.getTitle());
+        holder.inv_amount.setText("Amount: " + invoice.getAmount());
+        holder.inv_due_to.setText("Due to: " + invoice.getDueTo());
 
         if (invoice.isPaid()) {
-            holder.inv_paid.setImageResource(R.drawable.event_registered);
+            holder.inv_paid.setImageResource(R.drawable.paid);
         } else
-            holder.inv_paid.setImageResource(R.drawable.event_full);
+            holder.inv_paid.setImageResource(R.drawable.not_paid);
 
 
         convertView.setFocusable(false);
@@ -82,7 +86,7 @@ public class InvoiceAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        TextView inv_date, inv_title;
+        TextView inv_date, inv_title, inv_amount, inv_due_to;
         ImageView inv_paid;
 
     }

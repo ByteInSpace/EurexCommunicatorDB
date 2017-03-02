@@ -10,6 +10,33 @@ public class Invoice {
     private String datum;
     private String title;
     private boolean paid;
+    private int image;
+    private String amount;
+    private String dueTo;
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
+
+    public String getDueTo() {
+        return dueTo;
+    }
+
+    public void setDueTo(String dueTo) {
+        this.dueTo = dueTo;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
 
     public int getId() {
         return id;
