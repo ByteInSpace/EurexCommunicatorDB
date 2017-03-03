@@ -92,7 +92,12 @@
             android:name=".PressActivity"
             android:label="@string/press"
             android:theme="@style/EurexCommunicatorTheme" />
-        <activity android:name=".MarginCalculatorsActivity"></activity>
+        <activity android:name=".MarginCalculatorsActivity"
+            android:label="@string/calculator"
+            android:theme="@style/EurexCommunicatorTheme"/>
+        <activity android:name=".FormsActivity"
+            android:label="@string/forms"
+            android:theme="@style/EurexCommunicatorTheme"></activity>
     </application>
 
 </manifest>

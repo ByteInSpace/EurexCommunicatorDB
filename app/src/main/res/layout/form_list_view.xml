@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@color/colorBackground"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        >
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/EurexCommunicatorMainView"
+    android:background="@color/colorBackground"
+    android:layout_margin="4dp"
+    >
+
+    <TextView android:id="@+id/date"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/EurexCommunicatorDate"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:maxLines="1"
+
+        />
+
+    <TextView android:id="@+id/headline"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/EurexCommunicatorHeadline"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_below="@+id/date"
+        />
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/headline">
+
+        <TextView android:id="@+id/tag1"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/EurexCommunicatorTag"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+
+            />
+        <TextView android:id="@+id/tag2"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/EurexCommunicatorTag"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_toRightOf="@id/tag1"
+            />
+        <TextView android:id="@+id/tag3"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/EurexCommunicatorTag"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_toRightOf="@id/tag2"
+            android:focusableInTouchMode="false"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+

@@ -142,7 +142,10 @@ public abstract class BasePublicActivity extends AppCompatActivity {
                     case 5:
                         showMarginCalculators();
                         return;
-                    case 7:
+                    case 6:
+                        showForms();
+                        return;
+                    case 8:
                         showLogon();
                         return;
                 }
@@ -177,6 +180,11 @@ public abstract class BasePublicActivity extends AppCompatActivity {
 
     protected void showNews() {
         Intent intent = new Intent(this, NewsActivity.class);
+        startActivity(intent);
+    }
+
+    protected void showForms() {
+        Intent intent = new Intent(this, FormsActivity.class);
         startActivity(intent);
     }
 
