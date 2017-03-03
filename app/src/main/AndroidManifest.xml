@@ -69,11 +69,21 @@
             android:name=".FutureDetailActivity"
             android:label="@string/futures"
             android:theme="@style/EurexCommunicatorTheme" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".TradingOverviewActivity" />
-        <activity android:name=".OrderDetailActivity" />
-        <activity android:name=".EmergencyActionActivity" />
-        <activity android:name=".PressActivity"></activity>
+        <activity android:name=".NotificationActivity"
+            android:label="@string/notification"
+            android:theme="@style/EurexCommunicatorTheme"/>
+        <activity android:name=".TradingOverviewActivity"
+            android:label="@string/orderbook"
+            android:theme="@style/EurexCommunicatorTheme"/>
+        <activity android:name=".OrderDetailActivity"
+            android:label="@string/orderdetail"
+            android:theme="@style/EurexCommunicatorTheme"/>
+        <activity android:name=".EmergencyActionActivity"
+            android:label="@string/emergency"
+            android:theme="@style/EurexCommunicatorTheme"/>
+        <activity android:name=".PressActivity"
+            android:label="@string/press"
+            android:theme="@style/EurexCommunicatorTheme"></activity>
     </application>
 
 </manifest>

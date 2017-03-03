@@ -146,7 +146,7 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                         showEmergency();
                         return;
                     case 5:
-                        //showLogon();
+                        showEvents();
                         return;
                 }
             }

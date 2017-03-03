@@ -16,6 +16,7 @@ public class AuthenticationService {
     public static final String RIGHT_SURVEYS = "surveys";
     public static final String RIGHT_CONTACT_TKAM = "contact_tkam";
     public static final String RIGHT_INVOICE = "invoice";
+    public static final String RIGHT_EVENT = "event";
     public static final String RIGHT_REPORT = "report";
     public static final String RIGHT_NOTIFY_CUSTOMER = "notifycustomer";
     public static final String RIGHT_TRADING = "trading";
@@ -31,6 +32,7 @@ public class AuthenticationService {
         user.setRight(RIGHT_INVOICE, true);
         user.setRight(RIGHT_REPORT, true);
         user.setRight(RIGHT_TRADING, true);
+        user.setRight(RIGHT_EVENT, true);
         user.setName("Daniel");
         user.setVorname("Daniel");
         user.setFamilienname("Ludwig");

@@ -69,7 +69,7 @@ public class EventAdapter extends BaseAdapter {
         Context context = parent.getContext();
         Event event = (Event) getItem(position);
         holder.event_date_headline.setText("Event date:");
-        holder.event_coordinations.setText(event.getPlace() + "|" + event.getArea());
+        holder.event_coordinations.setText(event.getPlace() + " | " + event.getArea());
         holder.event_date.setText(event.getDatum());
         holder.event_headline.setText(event.getTitle());
 

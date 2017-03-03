@@ -67,4 +67,9 @@
     <string name="action_sign_in_eurex_clearing">Sign in Eurex Clearing</string>
     <string name="action_sign_in_xetra">Sign in Xetra</string>
     <string name="welcome_user">Welcome to Deutsche Börse Group\'s Client Portal</string>
+    <string name="notification">Notification</string>
+    <string name="orderbook">Orderbook</string>
+    <string name="orderdetail">Detail</string>
+    <string name="emergency">Emergency</string>
+    <string name="press">Press</string>
 </resources>
