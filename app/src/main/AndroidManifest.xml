@@ -55,12 +55,15 @@
         <activity
             android:name=".SurveyDetailActivity"
             android:label="@string/surveys"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/EurexCommunicatorTheme" />
         <activity
             android:name=".InvoicesActivity"
             android:label="@string/invoice"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ReportActivity" />
+        <activity android:name=".ReportActivity"
+            android:label="@string/report"
+            android:theme="@style/EurexCommunicatorTheme"
+            />
         <activity
             android:name=".MainPublicActivity"
             android:label="@string/welcome_no_user"

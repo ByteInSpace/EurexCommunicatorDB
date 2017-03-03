@@ -19,12 +19,14 @@ public class ReportService {
         Report report1 = new Report();
         report1.setId(1);
         report1.setTitle("CA05 - Capital Adjustment Series");
+        report1.setDue("19:15");
         report1.setExpected_final_date("20:15");
         outstandingReports.put(report1.getId(), report1);
 
         Report report2 = new Report();
         report2.setId(2);
         report2.setTitle("CB020 - Position Summary");
+        report2.setDue("19:15");
         report2.setExpected_final_date("20:15");
         outstandingReports.put(report2.getId(), report2);
 
@@ -32,6 +34,7 @@ public class ReportService {
         report3.setId(3);
         report3.setTitle("CB068 - Transaction Mix");
         report3.setExpected_final_date("20:15");
+        report3.setDue("19:15");
         outstandingReports.put(report3.getId(), report3);
 
         Report report4 = new Report();

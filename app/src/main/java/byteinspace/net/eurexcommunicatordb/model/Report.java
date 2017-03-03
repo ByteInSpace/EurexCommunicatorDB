@@ -10,6 +10,16 @@ public class Report {
     private String title;
     private String expected_final_date;
 
+    public String getDue() {
+        return due;
+    }
+
+    public void setDue(String due) {
+        this.due = due;
+    }
+
+    private String due;
+
     public int getId() {
         return id;
     }

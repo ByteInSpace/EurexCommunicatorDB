@@ -54,6 +54,7 @@ public class ReportAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.rep_time = (TextView) convertView.findViewById(R.id.rep_time);
             holder.rep_title = (TextView) convertView.findViewById(R.id.rep_title);
+            holder.estimated = (TextView) convertView.findViewById(R.id.estimated);
               convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -61,9 +62,9 @@ public class ReportAdapter extends BaseAdapter {
 
         Context context = parent.getContext();
         Report report = (Report) getItem(position);
-        holder.rep_time.setText(report.getExpected_final_date());
+        holder.rep_time.setText(report.getDue());
         holder.rep_title.setText(report.getTitle());
-
+        holder.estimated.setText("Estimated: " + report.getExpected_final_date());
 
         convertView.setFocusable(false);
 
@@ -73,7 +74,7 @@ public class ReportAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        TextView rep_time, rep_title;
+        TextView rep_time, rep_title, estimated;
 
 
     }
