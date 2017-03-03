@@ -151,6 +151,9 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                     case 6:
                         showReports();
                         return;
+                    case 7:
+                        showSurveys();
+                        return;
                 }
             }
         });

@@ -1,57 +1,69 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorBackground"
-    tools:context="byteinspace.net.eurexcommunicatordb.EventRegisterActivity">
-
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbar_srv_detail"
-        android:elevation="4dp"
-        android:background="@color/colorPrimary"
     >
-    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/EurexCommunicatorMainView"
+        android:background="@color/colorBackground"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            android:elevation="4dp"
+            style="@style/EurexCommunicatorToolbarStyle"
+            app:popupTheme="@style/EurexCommunicatorToolbarStyle"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:src="@drawable/backend_state"/>
+
+        </android.support.v7.widget.Toolbar>
 
     <TextView android:id="@+id/srv_detail_name"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_margin="10dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorHeadline"
-        android:layout_below="@id/toolbar_srv_detail"
+        android:layout_below="@id/toolbar"
         android:clickable="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:maxLines="1"
+        style="@style/EurexCommunicatorBigHeadline"
         />
 
     <TextView android:id="@+id/srv_detail_areaname"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorSubHeadline"
+
         android:layout_below="@id/srv_detail_name"
         android:clickable="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:maxLines="1"
         android:text="General"
+        style="@style/EurexCommunicatorSubHeadline"
         />
 
        <TextView android:id="@+id/srv_detail_question1"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
+           android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorHeadline"
+           style="@style/EurexCommunicatorRegularText"
            android:layout_below="@id/srv_detail_areaname"
                 android:clickable="false"
                 android:focusable="false"
@@ -68,32 +80,31 @@
         <RadioButton android:id="@+id/srvdetail_q1_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
+            style="@style/EurexCommunicatorRegularTextSmall"
             android:text="Active in both OTC and listed derivatives"
             android:buttonTint="@color/colorPrimary"
             />
         <RadioButton android:id="@+id/srvdetail_q1_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
+            style="@style/EurexCommunicatorRegularTextSmall"
             android:text="Primarily active in OTC derivatives"
             android:buttonTint="@color/colorPrimary"
             />
         <RadioButton android:id="@+id/srvdetail_q1_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
+            style="@style/EurexCommunicatorRegularTextSmall"
             android:text="Primarily active in listed derivatives"
             android:buttonTint="@color/colorPrimary"
             />
     </RadioGroup>
 
     <TextView android:id="@+id/srv_detail_question2"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorHeadline"
+        style="@style/EurexCommunicatorRegularText"
         android:layout_below="@id/srvgroup_q1_1"
         android:clickable="false"
         android:focusable="false"
@@ -109,32 +120,31 @@
         <RadioButton android:id="@+id/srvdetail_q2_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
+            style="@style/EurexCommunicatorRegularTextSmall"
             android:text="Directional fixed receiver portfolio"
             android:buttonTint="@color/colorPrimary"
             />
         <RadioButton android:id="@+id/srvdetail_q2_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
+            style="@style/EurexCommunicatorRegularTextSmall"
             android:text="Directional fixed payer portfolio"
             android:buttonTint="@color/colorPrimary"
             />
         <RadioButton android:id="@+id/srvdetail_q2_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
+            style="@style/EurexCommunicatorRegularTextSmall"
             android:text="Balanced portfolio with fixed payer and receiver swaps"
             android:buttonTint="@color/colorPrimary"
             />
     </RadioGroup>
 
     <TextView android:id="@+id/srv_detail_question3"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorHeadline"
+        style="@style/EurexCommunicatorRegularText"
         android:layout_below="@id/srvgroup_q2"
         android:clickable="false"
         android:focusable="false"
@@ -149,15 +159,14 @@
 
         <TableRow>
             <TextView android:id="@+id/srv_detail_question4_1"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_margin="10dp"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorHeadline"
+                style="@style/EurexCommunicatorRegularTextSmall"
                 android:clickable="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:textSize="@dimen/text_size_small"
+
                 android:text="Liquidity – bid-ask spread, general volume"/>
 
         <RadioGroup
@@ -168,21 +177,21 @@
             <RadioButton android:id="@+id/srvdetail_q4_1_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
+                style="@style/EurexCommunicatorRegularTextSmall"
                 android:text="1"
                 android:buttonTint="@color/colorPrimary"
                 />
             <RadioButton android:id="@+id/srvdetail_q4_1_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
+                style="@style/EurexCommunicatorRegularTextSmall"
                 android:text="2"
                 android:buttonTint="@color/colorPrimary"
                 />
             <RadioButton android:id="@+id/srvdetail_q4_1_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
+                style="@style/EurexCommunicatorRegularTextSmall"
                 android:text="3"
                 android:buttonTint="@color/colorPrimary"
                 />
@@ -191,14 +200,13 @@
         </TableRow>
         <TableRow>
             <TextView android:id="@+id/srv_detail_question4_2"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_margin="10dp"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorHeadline"
+                style="@style/EurexCommunicatorRegularTextSmall"
                 android:clickable="false"
                 android:focusable="false"
-                android:textSize="@dimen/text_size_small"
+
                 android:focusableInTouchMode="false"
                 android:text="Asset protection strategy – porting, default management"/>
 
@@ -209,21 +217,21 @@
                 <RadioButton android:id="@+id/srvdetail_q4_2_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimary"
+                    style="@style/EurexCommunicatorRegularTextSmall"
                     android:text="1"
                     android:buttonTint="@color/colorPrimary"
                     />
                 <RadioButton android:id="@+id/srvdetail_q4_2_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimary"
+                    style="@style/EurexCommunicatorRegularTextSmall"
                     android:text="2"
                     android:buttonTint="@color/colorPrimary"
                     />
                 <RadioButton android:id="@+id/srvdetail_q4_2_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimary"
+                    style="@style/EurexCommunicatorRegularTextSmall"
                     android:text="3"
                     android:buttonTint="@color/colorPrimary"
                     />
@@ -232,11 +240,10 @@
         </TableRow>
         <TableRow>
             <TextView android:id="@+id/srv_detail_question4_3"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_margin="10dp"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorHeadline"
+                style="@style/EurexCommunicatorRegularText"
                 android:clickable="false"
                 android:focusable="false"
                 android:textSize="@dimen/text_size_small"
@@ -273,4 +280,15 @@
             </RadioGroup>
         </TableRow>
     </TableLayout>
-</RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        style="@style/EurexCommunicatorDrawerStyle"
+
+        />
+
+</android.support.v4.widget.DrawerLayout>

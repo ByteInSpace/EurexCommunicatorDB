@@ -26,7 +26,7 @@ public class PrivateDrawerAdapter extends BaseAdapter {
 
     public static Map<Integer, MENU_ITEMS> menuItemsLinks = new HashMap<Integer, MENU_ITEMS>();
 
-    public static enum MENU_ITEMS {MAILING, INVOICE, NOTIFICATION, TRADING, TRADEMASER, SETTINGS, EMERGENCY, EVENT, REPORT}
+    public static enum MENU_ITEMS {MAILING, INVOICE, NOTIFICATION, TRADING, TRADEMASER, SETTINGS, EMERGENCY, EVENT, REPORT, SURVEY}
 
 
     List<MenuItem> menuItems = new ArrayList<MenuItem>();
@@ -70,6 +70,12 @@ public class PrivateDrawerAdapter extends BaseAdapter {
             menuItems.add(new MenuItem("Outstanding Reports", R.drawable.report_middle));
             i++;
             menuItemsLinks.put(i, MENU_ITEMS.REPORT);
+        }
+
+        if (user.isRightSet(AuthenticationService.RIGHT_SURVEYS)) {
+            menuItems.add(new MenuItem("Surveys", R.drawable.survey_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.SURVEY);
         }
 
         i++;
