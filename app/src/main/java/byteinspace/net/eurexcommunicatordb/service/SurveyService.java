@@ -21,7 +21,7 @@ public class SurveyService {
         survey1.setTitle("Buy Side Survey 2017");
         survey1.setDateDueTo("04.05.2017");
         survey1.setSubheadline("Eurex Clearing");
-        survey1.setSurvey_state(Survey.SURVEY_STATE.PENDING);
+        survey1.setSurvey_state(Survey.SURVEY_STATE.OPEN);
         surveys.put(survey1.getId(), survey1);
 
         Survey survey2 = new Survey();
@@ -29,7 +29,7 @@ public class SurveyService {
         survey2.setTitle("Customer Survey 2017");
         survey2.setDateDueTo("04.05.2017");
         survey2.setSubheadline("Eurex Clearing");
-        survey2.setSurvey_state(Survey.SURVEY_STATE.PENDING);
+        survey2.setSurvey_state(Survey.SURVEY_STATE.OPEN);
         surveys.put(survey2.getId(), survey2);
 
 
@@ -46,7 +46,7 @@ public class SurveyService {
         survey4.setTitle("Ask Side Survey 2017");
         survey4.setDateDueTo("04.01.2017");
         survey4.setSubheadline("Eurex Clearing");
-        survey4.setSurvey_state(Survey.SURVEY_STATE.EXPIRED);
+        survey4.setSurvey_state(Survey.SURVEY_STATE.DONE);
         surveys.put(survey4.getId(), survey4);
 
     }

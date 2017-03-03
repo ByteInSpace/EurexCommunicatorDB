@@ -60,10 +60,10 @@
             android:name=".InvoicesActivity"
             android:label="@string/invoice"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ReportActivity"
+        <activity
+            android:name=".ReportActivity"
             android:label="@string/report"
-            android:theme="@style/EurexCommunicatorTheme"
-            />
+            android:theme="@style/EurexCommunicatorTheme" />
         <activity
             android:name=".MainPublicActivity"
             android:label="@string/welcome_no_user"
@@ -72,21 +72,27 @@
             android:name=".FutureDetailActivity"
             android:label="@string/futures"
             android:theme="@style/EurexCommunicatorTheme" />
-        <activity android:name=".NotificationActivity"
+        <activity
+            android:name=".NotificationActivity"
             android:label="@string/notification"
-            android:theme="@style/EurexCommunicatorTheme"/>
-        <activity android:name=".TradingOverviewActivity"
+            android:theme="@style/EurexCommunicatorTheme" />
+        <activity
+            android:name=".TradingOverviewActivity"
             android:label="@string/orderbook"
-            android:theme="@style/EurexCommunicatorTheme"/>
-        <activity android:name=".OrderDetailActivity"
+            android:theme="@style/EurexCommunicatorTheme" />
+        <activity
+            android:name=".OrderDetailActivity"
             android:label="@string/orderdetail"
-            android:theme="@style/EurexCommunicatorTheme"/>
-        <activity android:name=".EmergencyActionActivity"
+            android:theme="@style/EurexCommunicatorTheme" />
+        <activity
+            android:name=".EmergencyActionActivity"
             android:label="@string/emergency"
-            android:theme="@style/EurexCommunicatorTheme"/>
-        <activity android:name=".PressActivity"
+            android:theme="@style/EurexCommunicatorTheme" />
+        <activity
+            android:name=".PressActivity"
             android:label="@string/press"
-            android:theme="@style/EurexCommunicatorTheme"></activity>
+            android:theme="@style/EurexCommunicatorTheme" />
+        <activity android:name=".MarginCalculatorsActivity"></activity>
     </application>
 
 </manifest>

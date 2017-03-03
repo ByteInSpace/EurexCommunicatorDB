@@ -70,13 +70,11 @@ public class SurveyAdapter extends BaseAdapter {
         holder.srv_dueto.setText(survey.getDateDueTo());
         holder.srv_headline.setText(survey.getTitle());
 
-        if (survey.getSurvey_state().equals(Survey.SURVEY_STATE.PENDING)) {
-            holder.srv_register.setImageResource(R.drawable.event_available);
-        } else if (survey.getSurvey_state().equals(Survey.SURVEY_STATE.EXPIRED)) {
-            holder.srv_register.setImageResource(R.drawable.event_full);
-        } else
-            holder.srv_register.setImageResource(R.drawable.event_registered);
-
+        if (survey.getSurvey_state().equals(Survey.SURVEY_STATE.DONE)) {
+            holder.srv_register.setImageResource(R.drawable.done);
+        } else if (survey.getSurvey_state().equals(Survey.SURVEY_STATE.OPEN)) {
+            holder.srv_register.setImageResource(R.drawable.open);
+        }
 
         convertView.setFocusable(false);
 

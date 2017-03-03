@@ -7,7 +7,7 @@ package byteinspace.net.eurexcommunicatordb.model;
 public class Survey {
 
     public static enum SURVEY_STATE {
-        EXPIRED, DONE, PENDING;
+        DONE, OPEN
     }
     private int id;
     private String title;
