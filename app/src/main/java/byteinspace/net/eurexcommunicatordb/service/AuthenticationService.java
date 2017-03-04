@@ -20,6 +20,7 @@ public class AuthenticationService {
     public static final String RIGHT_REPORT = "report";
     public static final String RIGHT_NOTIFY_CUSTOMER = "notifycustomer";
     public static final String RIGHT_TRADING = "trading";
+    public static final String RIGHT_TICKET = "ticket";
 
     private static Map<String, User> users = new HashMap<>();
 
@@ -33,6 +34,7 @@ public class AuthenticationService {
         user.setRight(RIGHT_REPORT, true);
         user.setRight(RIGHT_TRADING, true);
         user.setRight(RIGHT_EVENT, true);
+        user.setRight(RIGHT_TICKET, true);
         user.setName("Daniel");
         user.setVorname("Daniel");
         user.setFamilienname("Ludwig");

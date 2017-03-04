@@ -150,9 +150,19 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                     case 8:
                         showContactTkam();
                         return;
+                    case 9:
+                        showTicket();
+                        return;
                 }
             }
         });
+    }
+
+    private void showTicket() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, TicketActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
     }
 
     private void showContactTkam() {

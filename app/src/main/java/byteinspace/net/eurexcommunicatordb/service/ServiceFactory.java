@@ -18,6 +18,7 @@ public class ServiceFactory {
     private static TradingOverviewService tradingOverviewService;
     private static PressService pressService;
     private static FormsService formsService;
+    private static TicketService ticketService;
 
     private static ServiceFactory factory;
 
@@ -35,6 +36,8 @@ public class ServiceFactory {
         tradingOverviewService = new TradingOverviewService();
         pressService = new PressService();
         formsService = new FormsService();
+        ticketService = new TicketService();
+
     }
 
     public static ServiceFactory getFactory() {
@@ -71,4 +74,6 @@ public class ServiceFactory {
     public static PressService getPressService() { return pressService; }
 
     public static FormsService getFormsService() { return formsService; }
+
+    public static TicketService getTicketService() { return ticketService; }
 }

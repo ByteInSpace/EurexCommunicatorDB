@@ -101,9 +101,13 @@
             android:name=".FormsActivity"
             android:label="@string/forms"
             android:theme="@style/EurexCommunicatorTheme" />
-        <activity android:name=".ContactTKAMActivity"
+        <activity
+            android:name=".ContactTKAMActivity"
             android:label="@string/contact_tkam"
-            android:theme="@style/EurexCommunicatorTheme"></activity>
+            android:theme="@style/EurexCommunicatorTheme" />
+        <activity android:name=".TicketActivity"
+            android:label="@string/ticket"
+            android:theme="@style/EurexCommunicatorTheme" ></activity>
     </application>
 
 </manifest>
