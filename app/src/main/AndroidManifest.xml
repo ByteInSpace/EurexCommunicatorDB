@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -92,11 +93,16 @@
             android:name=".PressActivity"
             android:label="@string/press"
             android:theme="@style/EurexCommunicatorTheme" />
-        <activity android:name=".MarginCalculatorsActivity"
+        <activity
+            android:name=".MarginCalculatorsActivity"
             android:label="@string/calculator"
-            android:theme="@style/EurexCommunicatorTheme"/>
-        <activity android:name=".FormsActivity"
+            android:theme="@style/EurexCommunicatorTheme" />
+        <activity
+            android:name=".FormsActivity"
             android:label="@string/forms"
+            android:theme="@style/EurexCommunicatorTheme" />
+        <activity android:name=".ContactTKAMActivity"
+            android:label="@string/contact_tkam"
             android:theme="@style/EurexCommunicatorTheme"></activity>
     </application>
 

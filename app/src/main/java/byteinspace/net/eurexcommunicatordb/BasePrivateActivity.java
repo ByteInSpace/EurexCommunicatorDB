@@ -6,22 +6,15 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import byteinspace.net.eurexcommunicatordb.adapter.PrivateDrawerAdapter;
-import byteinspace.net.eurexcommunicatordb.adapter.PublicDrawerAdapter;
-import byteinspace.net.eurexcommunicatordb.model.Mailing;
 import byteinspace.net.eurexcommunicatordb.model.User;
-import byteinspace.net.eurexcommunicatordb.service.AuthenticationService;
 import byteinspace.net.eurexcommunicatordb.service.ServiceFactory;
-
-import static byteinspace.net.eurexcommunicatordb.adapter.PrivateDrawerAdapter.menuItemsLinks;
 
 /**
  * Created by conta on 24.02.2017.
@@ -154,11 +147,20 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                     case 7:
                         showSurveys();
                         return;
+                    case 8:
+                        showContactTkam();
+                        return;
                 }
             }
         });
     }
 
+    private void showContactTkam() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, ContactTKAMActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
+    }
     private void showEmergency() {
         Intent intentReceived = getIntent();
         Intent intent = new Intent(this, EmergencyActionActivity.class);
