@@ -93,6 +93,8 @@ public class PrivateDrawerAdapter extends BaseAdapter {
             menuItemsLinks.put(i, MENU_ITEMS.CIRCULAR);
         }
 
+        menuItems.add(new MenuItem("Notification Example", R.drawable.notification_middle));
+
         i++;
         menuItemsLinks.put(i, MENU_ITEMS.TRADEMASER);
         menuItems.add(new MenuItem("TradeMaster", R.drawable.game_big));

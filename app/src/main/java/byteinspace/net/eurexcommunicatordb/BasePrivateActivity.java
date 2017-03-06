@@ -156,9 +156,20 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                     case 10:
                         showCirculars();
                         return;
+
+                    case 11:
+                        showNotificationExample();
+                        return;
                 }
             }
         });
+    }
+
+    private void showNotificationExample() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, NotificationCrashActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
     }
 
     private void showCirculars() {
