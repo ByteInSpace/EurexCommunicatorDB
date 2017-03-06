@@ -13,7 +13,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         Handler handler = new Handler();
-        handler.postDelayed(getNewRunnable(), 1000);
+        handler.postDelayed(getNewRunnable(), 4000);
 
 
 

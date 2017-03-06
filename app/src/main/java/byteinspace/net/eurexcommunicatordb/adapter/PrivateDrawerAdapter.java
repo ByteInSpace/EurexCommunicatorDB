@@ -97,10 +97,10 @@ public class PrivateDrawerAdapter extends BaseAdapter {
 
         i++;
         menuItemsLinks.put(i, MENU_ITEMS.TRADEMASER);
-        menuItems.add(new MenuItem("TradeMaster", R.drawable.game_big));
+        menuItems.add(new MenuItem("TradeMaster", R.drawable.game_middle));
         i++;
         menuItemsLinks.put(i, MENU_ITEMS.SETTINGS);
-        menuItems.add(new MenuItem("Settings", R.drawable.settings_big));
+        menuItems.add(new MenuItem("Settings", R.drawable.settings_middle));
     }
 
     @Override
