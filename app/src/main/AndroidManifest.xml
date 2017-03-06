@@ -105,8 +105,12 @@
             android:name=".ContactTKAMActivity"
             android:label="@string/contact_tkam"
             android:theme="@style/EurexCommunicatorTheme" />
-        <activity android:name=".TicketActivity"
+        <activity
+            android:name=".TicketActivity"
             android:label="@string/ticket"
+            android:theme="@style/EurexCommunicatorTheme" />
+        <activity android:name=".RulesRegulationsActivity"
+            android:label="@string/rules"
             android:theme="@style/EurexCommunicatorTheme" ></activity>
     </application>
 

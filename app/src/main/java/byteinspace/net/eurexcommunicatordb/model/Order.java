@@ -13,6 +13,9 @@ public class Order {
     private String side = "B";
     private String orderID;
 
+
+
+
     public boolean isHeader() {
         return header;
     }

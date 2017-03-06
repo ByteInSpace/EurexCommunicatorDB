@@ -6,19 +6,37 @@ package byteinspace.net.eurexcommunicatordb.model;
 
 public class Circular {
 
-    private String releaseDate;
-    private String type;
-    private String source;
-    private String number;
+   private String releaseDate;
+    private String autor;
     private String title;
     private String url;
+    private String type;
+    private String number;
+    private boolean fav = false;
+    private int image;
 
-    public String getReleaseDate() {
-        return releaseDate;
+    public String getNumber() {
+        return number;
     }
 
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public boolean isFav() {
+        return fav;
+    }
+
+    public void setFav(boolean fav) {
+        this.fav = fav;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
     }
 
     public String getType() {
@@ -29,20 +47,25 @@ public class Circular {
         this.type = type;
     }
 
-    public String getSource() {
-        return source;
+    private String tag1;
+    private String tag2;
+    private String tag3;
+
+
+    public String getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setSource(String source) {
-        this.source = source;
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
-    public String getNumber() {
-        return number;
+    public String getAutor() {
+        return autor;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
     public String getTitle() {
@@ -59,5 +82,29 @@ public class Circular {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getTag1() {
+        return tag1;
+    }
+
+    public void setTag1(String tag1) {
+        this.tag1 = tag1;
+    }
+
+    public String getTag2() {
+        return tag2;
+    }
+
+    public void setTag2(String tag2) {
+        this.tag2 = tag2;
+    }
+
+    public String getTag3() {
+        return tag3;
+    }
+
+    public void setTag3(String tag3) {
+        this.tag3 = tag3;
     }
 }

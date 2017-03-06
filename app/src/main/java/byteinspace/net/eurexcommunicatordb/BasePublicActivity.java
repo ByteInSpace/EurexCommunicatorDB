@@ -145,7 +145,10 @@ public abstract class BasePublicActivity extends AppCompatActivity {
                     case 6:
                         showForms();
                         return;
-                    case 8:
+                    case 7:
+                        showRules();
+                        return;
+                    case 9:
                         showLogon();
                         return;
                 }
@@ -173,6 +176,10 @@ public abstract class BasePublicActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    protected void showRules() {
+        Intent intent = new Intent(this, RulesRegulationsActivity.class);
+        startActivity(intent);
+    }
     protected void showPress() {
         Intent intent = new Intent(this, PressActivity.class);
         startActivity(intent);

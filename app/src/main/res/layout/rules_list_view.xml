@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@color/colorBackground"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/EurexCommunicatorMainView"
+            android:background="@color/colorBackground"
+            android:layout_margin="4dp"
+            >
+
+            <ImageView android:id="@+id/rule_image"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="10dp"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_gravity="top"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/kurs"
+
+
+                />
+
+            <TextView android:id="@+id/rule"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/rule_image"
+                style="@style/EurexCommunicatorHeadline"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+
+                />
+
+
+
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

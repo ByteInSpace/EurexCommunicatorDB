@@ -19,6 +19,8 @@ public class ServiceFactory {
     private static PressService pressService;
     private static FormsService formsService;
     private static TicketService ticketService;
+    private static RulesService rulesService;
+    private static CircularsService circularsService;
 
     private static ServiceFactory factory;
 
@@ -37,6 +39,8 @@ public class ServiceFactory {
         pressService = new PressService();
         formsService = new FormsService();
         ticketService = new TicketService();
+        rulesService = new RulesService();
+        circularsService = new CircularsService();
 
     }
 
@@ -76,4 +80,10 @@ public class ServiceFactory {
     public static FormsService getFormsService() { return formsService; }
 
     public static TicketService getTicketService() { return ticketService; }
+
+    public static RulesService getRulesService() {
+        return rulesService;
+    }
+
+    public static CircularsService getCircularsService() { return circularsService;}
 }

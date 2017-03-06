@@ -32,6 +32,7 @@ public class PublicDrawerAdapter  extends BaseAdapter {
         menuItems.add(new MenuItem("Options", R.drawable.options_big));
         menuItems.add(new MenuItem("Margin Calculators", R.drawable.margin_big));
         menuItems.add(new MenuItem("Forms", R.drawable.forms_big));
+        menuItems.add(new MenuItem("Rules", R.drawable.rules_middle));
         menuItems.add(new MenuItem("TradeMaster", R.drawable.game_big));
         menuItems.add(new MenuItem("Member Logon", R.drawable.member_big));
         menuItems.add(new MenuItem("Settings", R.drawable.settings_big));
