@@ -22,8 +22,8 @@ public class TradingOverviewProducts {
         order0.setAmount("Amount");
         order0.setPrice("Price");
         order0.setLastExecutedQty("ExecutedQty");
-        order0.setLastExecutedPrice("ExecutedPrice");
-        order0.setLeaveQty("LeaveQty");
+        order0.setLastExecutedPrice("AvgPrice");
+        order0.setLeaveQty("Buy");
         order0.setOrderID("OrderID");
         order0.setHeader(true);
         orders.add(order0);

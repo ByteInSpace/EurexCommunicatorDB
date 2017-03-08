@@ -63,6 +63,18 @@
             android:textColor="@color/colorRed"
 
             />
+
+        <Button android:id="@+id/execution"
+            android:layout_height="wrap_content"
+            android:layout_width="220dp"
+            style="@style/EurexCommunicatorButton"
+            android:gravity="center"
+            android:layout_below="@id/marketresetquote"
+            android:textAlignment="gravity"
+            android:text="Send order"
+            android:textColor="@color/colorRed"
+
+            />
     </RelativeLayout>
 
     </RelativeLayout>
