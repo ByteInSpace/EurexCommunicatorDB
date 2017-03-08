@@ -158,6 +158,10 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                         return;
 
                     case 13:
+                        showEducation();
+                        return;
+
+                    case 15:
                         showNotificationExample();
                         return;
                 }
@@ -165,6 +169,12 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
         });
     }
 
+    private void showEducation() {
+        Intent intentReceived = getIntent();
+        Intent intent = new Intent(this, EducationActivity.class);
+        intent.putExtra("USERID", intentReceived.getStringExtra("USERID"));
+        startActivity(intent);
+    }
     private void showNotificationExample() {
         Intent intentReceived = getIntent();
         Intent intent = new Intent(this, NotificationCrashActivity.class);
