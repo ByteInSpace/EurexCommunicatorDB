@@ -124,40 +124,40 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
 
                 switch ((int) id) {
                     case 0: // Replace it by constants
-                        showNotification();
-                        return;
-                    case 1:
-                        showMailing();
-                        return;
-                    case 2:
-                        showInvoices();
-                        return;
-                    case 3:
-                        showOrderBook();
-                        return;
-                    case 4:
-                        showEmergency();
-                        return;
-                    case 5:
-                        showEvents();
-                        return;
-                    case 6:
-                        showReports();
-                        return;
-                    case 7:
-                        showSurveys();
-                        return;
-                    case 8:
-                        showContactTkam();
-                        return;
-                    case 9:
-                        showTicket();
-                        return;
-                    case 10:
                         showCirculars();
                         return;
+                    case 1:
+                        showEvents();
+                        return;
+                    case 2:
+                        showMailing();
+                        return;
+                    case 3: // Replace it by constants
+                        showNotification();
+                        return;
+                    case 4:
+                        showSurveys();
+                        return;
+                    case 5:
+                        showInvoices();
+                        return;
+                    case 6:
+                        showOrderBook();
+                        return;
+                    case 7:
+                        showReports();
+                        return;
+                    case 8:
+                        showTicket();
+                        return;
+                    case 9:
+                        showContactTkam();
+                        return;
+                    case 10:
+                        showEmergency();
+                        return;
 
-                    case 11:
+                    case 13:
                         showNotificationExample();
                         return;
                 }

@@ -26,7 +26,7 @@ public class PrivateDrawerAdapter extends BaseAdapter {
 
     public static Map<Integer, MENU_ITEMS> menuItemsLinks = new HashMap<Integer, MENU_ITEMS>();
 
-    public static enum MENU_ITEMS {MAILING, INVOICE, NOTIFICATION, TRADING, TRADEMASER, SETTINGS, EMERGENCY, EVENT, REPORT, SURVEY,CONTACT_TKAM, TICKET, CIRCULAR}
+    public static enum MENU_ITEMS {MAILING, INVOICE, NOTIFICATION, TRADING, TRADEMASER, SETTINGS, EMERGENCY, EVENT, REPORT, SURVEY,CONTACT_TKAM, TICKET, CIRCULAR, EXCHANGELIVE, EDUCATION}
 
 
     List<MenuItem> menuItems = new ArrayList<MenuItem>();
@@ -34,58 +34,8 @@ public class PrivateDrawerAdapter extends BaseAdapter {
 
     public PrivateDrawerAdapter(Context context, User user) {
         inflator = LayoutInflater.from(context);
-        menuItems.add(new MenuItem("Notifications", R.drawable.notification_middle));
-        menuItemsLinks.put(0, MENU_ITEMS.NOTIFICATION);
-        int i = 0;
 
-        if (user.isRightSet(AuthenticationService.RIGHT_MAILING)) {
-            menuItems.add(new MenuItem("Mailings", R.drawable.mailing_middle));
-            i++;
-            menuItemsLinks.put(i, MENU_ITEMS.MAILING);
-        }
-
-        if (user.isRightSet(AuthenticationService.RIGHT_INVOICE)) {
-            menuItems.add(new MenuItem("Invoices", R.drawable.invoice_middle));
-            i++;
-            menuItemsLinks.put(i, MENU_ITEMS.INVOICE);
-        }
-
-        if (user.isRightSet(AuthenticationService.RIGHT_TRADING)) {
-            menuItems.add(new MenuItem("Own trades", R.drawable.trading_middle));
-            i++;
-            menuItemsLinks.put(i, MENU_ITEMS.TRADING);
-        }
-
-        i++;
-        menuItemsLinks.put(i, MENU_ITEMS.EMERGENCY);
-        menuItems.add(new MenuItem("Emergency Action", R.drawable.emergency_middle));
-
-        if (user.isRightSet(AuthenticationService.RIGHT_EVENT)) {
-            menuItems.add(new MenuItem("Events", R.drawable.event_middle));
-            i++;
-            menuItemsLinks.put(i, MENU_ITEMS.EVENT);
-        }
-
-        if (user.isRightSet(AuthenticationService.RIGHT_REPORT)) {
-            menuItems.add(new MenuItem("Outstanding Reports", R.drawable.report_middle));
-            i++;
-            menuItemsLinks.put(i, MENU_ITEMS.REPORT);
-        }
-
-        if (user.isRightSet(AuthenticationService.RIGHT_SURVEYS)) {
-            menuItems.add(new MenuItem("Surveys", R.drawable.survey_middle));
-            i++;
-            menuItemsLinks.put(i, MENU_ITEMS.SURVEY);
-        }
-       menuItems.add(new MenuItem("Contact your TKAM", R.drawable.contacttkam));
-       i++;
-       menuItemsLinks.put(i, MENU_ITEMS.CONTACT_TKAM);
-
-        if (user.isRightSet(AuthenticationService.RIGHT_TICKET)) {
-            menuItems.add(new MenuItem("Ticket state", R.drawable.ticket_middle));
-            i++;
-            menuItemsLinks.put(i, MENU_ITEMS.TICKET);
-        }
+        int i=0;
 
         if (user.isRightSet(AuthenticationService.RIGHT_CIRCULAR)) {
             menuItems.add(new MenuItem("Circulars", R.drawable.circular_middle));
@@ -93,14 +43,66 @@ public class PrivateDrawerAdapter extends BaseAdapter {
             menuItemsLinks.put(i, MENU_ITEMS.CIRCULAR);
         }
 
-        menuItems.add(new MenuItem("Notification Example", R.drawable.notification_middle));
+        if (user.isRightSet(AuthenticationService.RIGHT_EVENT)) {
+            menuItems.add(new MenuItem("Events", R.drawable.event_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.EVENT);
+        }
+        if (user.isRightSet(AuthenticationService.RIGHT_MAILING)) {
+            menuItems.add(new MenuItem("Mailings", R.drawable.mailing_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.MAILING);
+        }
+        menuItems.add(new MenuItem("Notifications", R.drawable.notification_middle));
+        menuItemsLinks.put(0, MENU_ITEMS.NOTIFICATION);
 
+        if (user.isRightSet(AuthenticationService.RIGHT_SURVEYS)) {
+            menuItems.add(new MenuItem("Surveys", R.drawable.survey_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.SURVEY);
+        }
+        if (user.isRightSet(AuthenticationService.RIGHT_INVOICE)) {
+            menuItems.add(new MenuItem("Invoices", R.drawable.invoice_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.INVOICE);
+        }
+        if (user.isRightSet(AuthenticationService.RIGHT_TRADING)) {
+            menuItems.add(new MenuItem("Own trades", R.drawable.trading_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.TRADING);
+        }
+        if (user.isRightSet(AuthenticationService.RIGHT_REPORT)) {
+            menuItems.add(new MenuItem("Outstanding Reports", R.drawable.report_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.REPORT);
+        }
+        if (user.isRightSet(AuthenticationService.RIGHT_TICKET)) {
+            menuItems.add(new MenuItem("Ticket state", R.drawable.ticket_middle));
+            i++;
+            menuItemsLinks.put(i, MENU_ITEMS.TICKET);
+        }
+        menuItems.add(new MenuItem("Contact Eurex", R.drawable.contacttkam));
+        i++;
+        menuItemsLinks.put(i, MENU_ITEMS.CONTACT_TKAM);
+        i++;
+        menuItemsLinks.put(i, MENU_ITEMS.EMERGENCY);
+        menuItems.add(new MenuItem("Emergency Action", R.drawable.emergency_middle));
         i++;
         menuItemsLinks.put(i, MENU_ITEMS.TRADEMASER);
         menuItems.add(new MenuItem("TradeMaster", R.drawable.game_middle));
         i++;
+        menuItemsLinks.put(i, MENU_ITEMS.EXCHANGELIVE);
+        menuItems.add(new MenuItem("ExchangeLive!", R.drawable.live));
+        i++;
+        menuItemsLinks.put(i, MENU_ITEMS.EDUCATION);
+        menuItems.add(new MenuItem("Education", R.drawable.education_middle));
+        i++;
         menuItemsLinks.put(i, MENU_ITEMS.SETTINGS);
         menuItems.add(new MenuItem("Settings", R.drawable.settings_middle));
+
+        menuItems.add(new MenuItem("Notification Example", R.drawable.notification_middle));
+
+
     }
 
     @Override
