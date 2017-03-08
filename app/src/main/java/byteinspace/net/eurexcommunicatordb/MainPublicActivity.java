@@ -40,4 +40,14 @@ public class MainPublicActivity extends BasePublicActivity {
     public void ib8Click(View view) {
         showPress();
     }
+
+    public void iba3Click(View view) {
+        showRules();
+    }
+    public void iba2Click(View view) {
+        showMarginCalculators();
+    }
+    public void iba1Click(View view) {
+        showForms();
+    }
 }

@@ -55,6 +55,16 @@
 
                 style="@style/EurexCommunicatorMainViewIcons"
                 />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iba1"
+                android:background="@drawable/forms_very_big"
+                android:layout_toRightOf="@id/ib8"
+                android:onClick="iba1Click"
+
+                style="@style/EurexCommunicatorMainViewIcons"
+                />
 
 
 
@@ -78,6 +88,16 @@
                  style="@style/EurexCommunicatorMainViewIcons"
                 />
 
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iba2"
+                android:background="@drawable/margin_very_big"
+                android:onClick="iba2Click"
+                android:layout_toRightOf="@id/ib3"
+                android:layout_below="@id/iba1"
+                style="@style/EurexCommunicatorMainViewIcons"
+                />
 
 
             <ImageButton
@@ -98,6 +118,17 @@
                 android:layout_below="@id/ib3"
                 android:layout_toRightOf="@id/ib4"
                    style="@style/EurexCommunicatorMainViewIcons"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iba3"
+                android:background="@drawable/rules_very_big"
+                android:onClick="iba3Click"
+                android:layout_below="@id/iba2"
+                android:layout_toRightOf="@id/ib5"
+                style="@style/EurexCommunicatorMainViewIcons"
                 />
 
 
