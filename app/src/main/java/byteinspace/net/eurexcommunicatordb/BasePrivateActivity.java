@@ -161,7 +161,7 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                         showEducation();
                         return;
 
-                    case 15:
+                    case 17:
                         showNotificationExample();
                         return;
                 }

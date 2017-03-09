@@ -61,6 +61,15 @@
             android:id="@+id/calculatemarginprisma"
             android:layout_below="@id/calculatemarginprismaclearing"
             style="@style/EurexCommunicatorButton"/>
+
+            <Button android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:text="Fee calculator"
+                android:id="@+id/calculatefeee"
+                android:layout_below="@id/calculatemarginprisma"
+                style="@style/EurexCommunicatorButton"/>
+
+
         </RelativeLayout>
 
     </RelativeLayout>
