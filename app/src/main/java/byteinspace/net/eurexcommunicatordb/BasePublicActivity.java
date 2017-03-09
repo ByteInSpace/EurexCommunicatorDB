@@ -134,20 +134,21 @@ public abstract class BasePublicActivity extends AppCompatActivity {
                         showPress();
                         return;
                     case 2:
-                        showIndices(Constants.MAIN);
-                        return;
-                    case 3:
-                        showFutures();
-                        return;
-                    case 5:
-                        showMarginCalculators();
-                        return;
-                    case 6:
                         showForms();
                         return;
-                    case 7:
+                    case 3:
                         showRules();
                         return;
+                    case 4:
+                        showIndices(Constants.MAIN);
+                        return;
+                    case 5:
+                        showFutures();
+                        return;
+                    case 7:
+                        showMarginCalculators();
+                        return;
+
                     case 9:
                         showLogon();
                         return;

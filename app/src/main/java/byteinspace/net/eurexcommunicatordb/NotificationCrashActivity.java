@@ -46,7 +46,7 @@ public class NotificationCrashActivity extends BasePrivateActivity {
 
         notificationManager.notify(1234, noti);
 
-             new AlertDialog.Builder(this).setTitle(title).setMessage(message).setIcon(R.drawable.emergency_middle).setNeutralButton("Close", null).setNegativeButton("Delete all orders", null).show();
+             new AlertDialog.Builder(this).setTitle(title).setMessage(message).setIcon(R.drawable.emergency_middle).setNeutralButton("Close", null).setNegativeButton("Delete all orders?", null).show();
 
     }
 }

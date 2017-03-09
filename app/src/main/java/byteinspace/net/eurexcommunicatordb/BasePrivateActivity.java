@@ -144,20 +144,20 @@ public abstract class BasePrivateActivity extends AppCompatActivity {
                     case 6:
                         showOrderBook();
                         return;
-                    case 7:
+                    case 8:
                         showReports();
                         return;
-                    case 8:
+                    case 9:
                         showTicket();
                         return;
-                    case 9:
+                    case 10:
                         showContactTkam();
                         return;
-                    case 10:
+                    case 11:
                         showEmergency();
                         return;
 
-                    case 13:
+                    case 14:
                         showEducation();
                         return;
 

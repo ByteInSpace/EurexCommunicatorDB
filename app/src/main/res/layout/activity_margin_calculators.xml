@@ -36,28 +36,28 @@
             >
        <Button android:layout_height="wrap_content"
            android:layout_width="200dp"
-           android:text="Prisma Margin Estimator"
+           android:text="Eurex Margin Calculators"
            android:id="@+id/calculatefee"
            style="@style/EurexCommunicatorButton"
            />
 
         <Button android:layout_height="wrap_content"
             android:layout_width="200dp"
-            android:text="Risk-Based Margin Calculator"
+            android:text="OptionMaster"
             android:id="@+id/calculatemargin"
             android:layout_below="@id/calculatefee"
             style="@style/EurexCommunicatorButton"/>
 
         <Button android:layout_height="wrap_content"
         android:layout_width="200dp"
-        android:text="Clearing Prisma Margin Calculator"
+        android:text="StrategyMaster"
         android:id="@+id/calculatemarginprismaclearing"
         android:layout_below="@id/calculatemargin"
             style="@style/EurexCommunicatorButton"/>
 
         <Button android:layout_height="wrap_content"
             android:layout_width="200dp"
-            android:text="Prisma Online Margin"
+            android:text="VarianceCalculator"
             android:id="@+id/calculatemarginprisma"
             android:layout_below="@id/calculatemarginprismaclearing"
             style="@style/EurexCommunicatorButton"/>

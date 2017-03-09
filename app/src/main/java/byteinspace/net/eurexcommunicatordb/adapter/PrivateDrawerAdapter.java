@@ -67,17 +67,21 @@ public class PrivateDrawerAdapter extends BaseAdapter {
             menuItemsLinks.put(i, MENU_ITEMS.INVOICE);
         }
         if (user.isRightSet(AuthenticationService.RIGHT_TRADING)) {
-            menuItems.add(new MenuItem("Own trades", R.drawable.trading_middle));
+            menuItems.add(new MenuItem("Own Trades", R.drawable.trading_middle));
             i++;
             menuItemsLinks.put(i, MENU_ITEMS.TRADING);
         }
+        menuItemsLinks.put(i, MENU_ITEMS.PORTFOLIO);
+        menuItems.add(new MenuItem("Personal Portfolio", R.drawable.portfolio_middle));
+        i++;
+
         if (user.isRightSet(AuthenticationService.RIGHT_REPORT)) {
             menuItems.add(new MenuItem("Outstanding Reports", R.drawable.report_middle));
             i++;
             menuItemsLinks.put(i, MENU_ITEMS.REPORT);
         }
         if (user.isRightSet(AuthenticationService.RIGHT_TICKET)) {
-            menuItems.add(new MenuItem("Ticket state", R.drawable.ticket_middle));
+            menuItems.add(new MenuItem("Ticket Tracker", R.drawable.ticket_middle));
             i++;
             menuItemsLinks.put(i, MENU_ITEMS.TICKET);
         }
@@ -99,9 +103,6 @@ public class PrivateDrawerAdapter extends BaseAdapter {
         i++;
         menuItemsLinks.put(i, MENU_ITEMS.MISS);
         menuItems.add(new MenuItem("MIS / KPI Tracker", R.drawable.tracker_middle));
-        i++;
-        menuItemsLinks.put(i, MENU_ITEMS.PORTFOLIO);
-        menuItems.add(new MenuItem("Personal portfolio", R.drawable.portfolio_middle));
         i++;
 
         menuItemsLinks.put(i, MENU_ITEMS.SETTINGS);

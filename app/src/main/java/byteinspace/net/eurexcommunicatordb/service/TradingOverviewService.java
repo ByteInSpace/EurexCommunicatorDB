@@ -28,7 +28,7 @@ public class TradingOverviewService {
         order1.setPrice("12.53 EUR");
         order1.setLastExecutedQty("0");
         order1.setLastExecutedPrice("0");
-        order1.setLeaveQty(order1.getAmount());
+        order1.setLeaveQty("B");
         order1.setOrderID("458943896");
         product1.getOrders().add(order1);
 
@@ -37,7 +37,7 @@ public class TradingOverviewService {
         order2.setPrice("13.53 EUR");
         order2.setLastExecutedQty("2000");
         order2.setLastExecutedPrice("13.21");
-        order2.setLeaveQty("3000");
+        order2.setLeaveQty("B");
         order2.setSide("S");
         order2.setOrderID("458942343");
          product1.getOrders().add(order2);
@@ -47,7 +47,7 @@ public class TradingOverviewService {
         order3.setPrice("12.53 EUR");
         order3.setLastExecutedQty("0");
         order3.setLastExecutedPrice("0");
-        order3.setLeaveQty(order1.getPrice());
+        order3.setLeaveQty("S");
         order3.setOrderID("458924123");
         product1.getOrders().add(order3);
 
@@ -61,7 +61,7 @@ public class TradingOverviewService {
         order4.setPrice("22.53 EUR");
         order4.setLastExecutedQty("0");
         order4.setLastExecutedPrice("0");
-        order4.setLeaveQty(order1.getAmount());
+        order4.setLeaveQty("B");
         order4.setOrderID("458943896");
         product2.getOrders().add(order4);
 
@@ -70,7 +70,7 @@ public class TradingOverviewService {
         order5.setPrice("23.53 EUR");
         order5.setLastExecutedQty("2000");
         order5.setLastExecutedPrice("23.21");
-        order5.setLeaveQty("3000");
+        order5.setLeaveQty("S");
         order5.setSide("S");
         order5.setOrderID("458943566");
         product2.getOrders().add(order5);
@@ -80,7 +80,7 @@ public class TradingOverviewService {
         order6.setPrice("22.53 EUR");
         order6.setLastExecutedQty("0");
         order6.setLastExecutedPrice("0");
-        order6.setLeaveQty(order1.getPrice());
+        order6.setLeaveQty("B");
         order6.setOrderID("4583453896");
         product2.getOrders().add(order6);
 

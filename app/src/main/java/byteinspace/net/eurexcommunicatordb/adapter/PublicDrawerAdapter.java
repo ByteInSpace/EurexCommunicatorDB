@@ -27,12 +27,13 @@ public class PublicDrawerAdapter  extends BaseAdapter {
         inflator = LayoutInflater.from(context);
         menuItems.add(new MenuItem("News", R.drawable.newspaper_big));
         menuItems.add(new MenuItem("Press Releases", R.drawable.press_big));
+        menuItems.add(new MenuItem("Forms", R.drawable.forms_big));
+        menuItems.add(new MenuItem("Rules & Regulations", R.drawable.rules_middle));
+
         menuItems.add(new MenuItem("Eurex Indices", R.drawable.chart_big));
         menuItems.add(new MenuItem("Futures", R.drawable.futures_big));
         menuItems.add(new MenuItem("Options", R.drawable.options_big));
         menuItems.add(new MenuItem("Trading Tools", R.drawable.margin_big));
-        menuItems.add(new MenuItem("Forms", R.drawable.forms_big));
-        menuItems.add(new MenuItem("Rules", R.drawable.rules_middle));
         menuItems.add(new MenuItem("TradeMaster", R.drawable.game_big));
         menuItems.add(new MenuItem("Member Logon", R.drawable.member_big));
         menuItems.add(new MenuItem("Settings", R.drawable.settings_big));

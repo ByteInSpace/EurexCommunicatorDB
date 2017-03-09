@@ -17,7 +17,7 @@ public class NotificationService {
         Notification notif1 = new Notification();
         notif1.setLevel(Notification.LEVEL.URGENT);
         notif1.setDate("01/03/17 13:10");
-        notif1.setTitle("Crash in T7 partition 8. Mass Delete");
+        notif1.setTitle("Crash in T7 partition 8.");
         notif1.setRead(false);
         notifications.add(notif1);
 
@@ -31,7 +31,7 @@ public class NotificationService {
         Notification notif3 = new Notification();
         notif3.setLevel(Notification.LEVEL.URGENT);
         notif3.setDate("24/02/17 13:10");
-        notif3.setTitle("Crash in T7 partition 4. Mass Delete");
+        notif3.setTitle("Crash in T7 partition 4.");
         notif3.setRead(false);
         notifications.add(notif3);
 
@@ -45,7 +45,7 @@ public class NotificationService {
         Notification notif5 = new Notification();
         notif5.setLevel(Notification.LEVEL.URGENT);
         notif5.setDate("20/02/17 13:10");
-        notif5.setTitle("Crash in T7 partition 8. Mass Delete");
+        notif5.setTitle("OTR limit for FDAX exceeded");
         notif5.setRead(true);
         notifications.add(notif5);
 

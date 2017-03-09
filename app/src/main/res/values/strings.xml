@@ -47,7 +47,7 @@
     <string name="ort">Ort:</string>
     <string name="datum">Datum:</string>
     <string name="surveys">Surveys</string>
-    <string name="invoice">Invoice</string>
+    <string name="invoice">Invoices</string>
     <string name="knowledge">Knowledge Base</string>
     <string name="faq">FAQ</string>
     <string name="dictionary">Dictionary</string>
@@ -67,15 +67,16 @@
     <string name="action_sign_in_eurex_clearing">Sign in Eurex Clearing</string>
     <string name="action_sign_in_xetra">Sign in Xetra</string>
     <string name="welcome_user">Welcome to Deutsche Börse Group\'s Client Portal</string>
-    <string name="notification">Notification</string>
-    <string name="orderbook">Own trades</string>
+    <string name="notification">Notifications</string>
+    <string name="orderbook">Own Trades</string>
     <string name="orderdetail">Detail</string>
-    <string name="emergency">Emergency</string>
-    <string name="press">Press</string>
+    <string name="emergency">Emergency Action</string>
+    <string name="press">Press Releases</string>
     <string name="report">Reports</string>
     <string name="forms">Forms</string>
     <string name="contact_tkam">Contact TKAM</string>
-    <string name="ticket">Tickets</string>
-    <string name="rules">Rules</string>
+    <string name="ticket">Ticket Tracker</string>
+    <string name="rules">Rules and Regulations</string>
     <string name="education">Education</string>
+    <string name="privatearea">Member Lounge</string>
 </resources>
